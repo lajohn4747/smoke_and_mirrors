@@ -69,6 +69,6 @@ list (APPEND A_HEADER
   src/simplesystem.h
 )
 
-add_executable(simulation ${A_SRC} ${A_HEADER})
+add_executable(simulation ${A_SRC} ${A_HEADER} src/rigidBall.h src/rigidBall.cpp)
 target_include_directories(simulation PUBLIC ${A_INCLUDES})
 target_link_libraries(simulation ${A_LIBS})

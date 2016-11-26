@@ -226,9 +226,9 @@ void drawSystem()
     GLProgram gl(program_light, program_color, &camera);
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
-    simpleSystem->draw(gl);
-    pendulumSystem->draw(gl);
-    clothSystem->draw(gl);
+    //simpleSystem->draw(gl);
+    //pendulumSystem->draw(gl);
+    //clothSystem->draw(gl);
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);

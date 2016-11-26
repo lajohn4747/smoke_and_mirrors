@@ -116,8 +116,6 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
         for(unsigned j = 0; j < W; j++){
             //pickVel(i,j,velocities).print();
             f.push_back(pickVel(i, j, velocities));
-            //Vector3f structureSpring = computeStructString(i,j, positions);
-            //structureSpring.print();
             //printf("%d %d\n", i, j);
             if (i == 0 && (j == 0 || j == W-1)) {
                 allForces = Vector3f(0,0,0);
