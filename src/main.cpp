@@ -14,6 +14,7 @@
 #include "simplesystem.h"
 #include "pendulumsystem.h"
 #include "clothsystem.h"
+#include "rigidBall.h"
 
 using namespace std;
 
@@ -53,6 +54,7 @@ bool gMousePressed = false;
 GLuint program_color;
 GLuint program_light;
 
+RigidBall* rigidBall;
 SimpleSystem* simpleSystem;
 PendulumSystem* pendulumSystem;
 ClothSystem* clothSystem;
@@ -185,10 +187,9 @@ void initSystem()
     }
 
     simpleSystem = new SimpleSystem();
-    // TODO you can modify the number of particles
     pendulumSystem = new PendulumSystem();
-    // TODO customize initialization of cloth system
     clothSystem = new ClothSystem();
+    rigidBall = new RigidBall();
 }
 
 void freeSystem() {
@@ -196,6 +197,7 @@ void freeSystem() {
     delete timeStepper; timeStepper = nullptr;
     delete pendulumSystem; pendulumSystem = nullptr;
     delete clothSystem; clothSystem = nullptr;
+    delete rigidBall; rigidBall = nullptr;
 }
 
 void resetTime() {
@@ -214,6 +216,7 @@ void stepSystem()
         timeStepper->takeStep(simpleSystem, h);
         timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
+        timeStepper->takeStep(rigidBall, h);
         simulated_s += h;
     }
 }
@@ -229,6 +232,7 @@ void drawSystem()
     //simpleSystem->draw(gl);
     //pendulumSystem->draw(gl);
     //clothSystem->draw(gl);
+    rigidBall->draw(gl);
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);

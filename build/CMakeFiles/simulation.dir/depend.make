@@ -43,6 +43,7 @@ CMakeFiles/simulation.dir/src/main.cpp.o: ../src/gl.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/particlesystem.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/pendulumsystem.h
+CMakeFiles/simulation.dir/src/main.cpp.o: ../src/rigidBall.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/simplesystem.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/starter3_util.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/timestepper.h
@@ -75,6 +76,21 @@ CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: ../src/particlesystem.h
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: ../src/pendulumsystem.cpp
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: ../src/pendulumsystem.h
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: ../src/vertexrecorder.h
+
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix2f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix3f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix4f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Quat4f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector2f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector3f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector4f.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../vecmath/include/vecmath.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/camera.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/gl.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/particlesystem.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/rigidBall.cpp
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/rigidBall.h
+CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/simulation.dir/src/simplesystem.cpp.o: ../vecmath/include/Matrix2f.h
 CMakeFiles/simulation.dir/src/simplesystem.cpp.o: ../vecmath/include/Matrix3f.h
