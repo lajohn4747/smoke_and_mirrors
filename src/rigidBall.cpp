@@ -26,9 +26,11 @@ std::vector<Vector3f> RigidBall::evalF(std::vector<Vector3f> state) {
 void RigidBall::draw(GLProgram &gl) {
     const Vector3f PARTICLE_COLOR(0.4f, 0.7f, 1.0f);
     gl.updateMaterial(PARTICLE_COLOR);
-    //Vector3f pos(1, 0, 0); //YOUR PARTICLE POSITION
     Vector3f pos = getState()[0];
     gl.updateModelMatrix(Matrix4f::translation(pos));
     drawSphere(.5f, 30, 10);
 }
 //TODO Collision detection
+bool RigidBall::checkCollision() {
+    return false;
+}

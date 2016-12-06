@@ -311,33 +311,6 @@ src/rigidBall.cpp.s:
 	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/rigidBall.cpp.s
 .PHONY : src/rigidBall.cpp.s
 
-src/simplesystem.o: src/simplesystem.cpp.o
-
-.PHONY : src/simplesystem.o
-
-# target to build an object file
-src/simplesystem.cpp.o:
-	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/simplesystem.cpp.o
-.PHONY : src/simplesystem.cpp.o
-
-src/simplesystem.i: src/simplesystem.cpp.i
-
-.PHONY : src/simplesystem.i
-
-# target to preprocess a source file
-src/simplesystem.cpp.i:
-	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/simplesystem.cpp.i
-.PHONY : src/simplesystem.cpp.i
-
-src/simplesystem.s: src/simplesystem.cpp.s
-
-.PHONY : src/simplesystem.s
-
-# target to generate assembly for a file
-src/simplesystem.cpp.s:
-	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/simplesystem.cpp.s
-.PHONY : src/simplesystem.cpp.s
-
 src/starter3_util.o: src/starter3_util.cpp.o
 
 .PHONY : src/starter3_util.o
@@ -448,9 +421,6 @@ help:
 	@echo "... src/rigidBall.o"
 	@echo "... src/rigidBall.i"
 	@echo "... src/rigidBall.s"
-	@echo "... src/simplesystem.o"
-	@echo "... src/simplesystem.i"
-	@echo "... src/simplesystem.s"
 	@echo "... src/starter3_util.o"
 	@echo "... src/starter3_util.i"
 	@echo "... src/starter3_util.s"

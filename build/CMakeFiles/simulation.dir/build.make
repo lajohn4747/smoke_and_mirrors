@@ -249,33 +249,9 @@ CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.provides: CMakeFiles/simulati
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.provides.build: CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o
 
 
-CMakeFiles/simulation.dir/src/simplesystem.cpp.o: CMakeFiles/simulation.dir/flags.make
-CMakeFiles/simulation.dir/src/simplesystem.cpp.o: ../src/simplesystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simulation.dir/src/simplesystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/simplesystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.cpp
-
-CMakeFiles/simulation.dir/src/simplesystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/simplesystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.cpp > CMakeFiles/simulation.dir/src/simplesystem.cpp.i
-
-CMakeFiles/simulation.dir/src/simplesystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/simplesystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.cpp -o CMakeFiles/simulation.dir/src/simplesystem.cpp.s
-
-CMakeFiles/simulation.dir/src/simplesystem.cpp.o.requires:
-
-.PHONY : CMakeFiles/simulation.dir/src/simplesystem.cpp.o.requires
-
-CMakeFiles/simulation.dir/src/simplesystem.cpp.o.provides: CMakeFiles/simulation.dir/src/simplesystem.cpp.o.requires
-	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/simplesystem.cpp.o.provides.build
-.PHONY : CMakeFiles/simulation.dir/src/simplesystem.cpp.o.provides
-
-CMakeFiles/simulation.dir/src/simplesystem.cpp.o.provides.build: CMakeFiles/simulation.dir/src/simplesystem.cpp.o
-
-
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/rigidBall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/rigidBall.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp
 
 CMakeFiles/simulation.dir/src/rigidBall.cpp.i: cmake_force
@@ -307,7 +283,6 @@ simulation_OBJECTS = \
 "CMakeFiles/simulation.dir/src/timestepper.cpp.o" \
 "CMakeFiles/simulation.dir/src/particlesystem.cpp.o" \
 "CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o" \
-"CMakeFiles/simulation.dir/src/simplesystem.cpp.o" \
 "CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
 
 # External object files for target simulation
@@ -321,13 +296,12 @@ simulation: CMakeFiles/simulation.dir/src/clothsystem.cpp.o
 simulation: CMakeFiles/simulation.dir/src/timestepper.cpp.o
 simulation: CMakeFiles/simulation.dir/src/particlesystem.cpp.o
 simulation: CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o
-simulation: CMakeFiles/simulation.dir/src/simplesystem.cpp.o
 simulation: CMakeFiles/simulation.dir/src/rigidBall.cpp.o
 simulation: CMakeFiles/simulation.dir/build.make
 simulation: 3rd_party/glfw/src/libglfw3.a
 simulation: vecmath/libvecmath.a
 simulation: CMakeFiles/simulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable simulation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -343,7 +317,6 @@ CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/clothsystem.cp
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/timestepper.cpp.o.requires
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/particlesystem.cpp.o.requires
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.requires
-CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/simplesystem.cpp.o.requires
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/rigidBall.cpp.o.requires
 
 .PHONY : CMakeFiles/simulation.dir/requires

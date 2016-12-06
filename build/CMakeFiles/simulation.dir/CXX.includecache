@@ -143,8 +143,6 @@ camera.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
 timestepper.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
-simplesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.h
 pendulumsystem.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
 clothsystem.h
@@ -197,20 +195,6 @@ vertexrecorder.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
 
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
-particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
-
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.cpp
-simplesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.h
-camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
-vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
-
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/simplesystem.h
-vector
--
 particlesystem.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
 
