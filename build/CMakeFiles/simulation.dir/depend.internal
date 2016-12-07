@@ -10,9 +10,9 @@ CMakeFiles/simulation.dir/src/camera.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -22,12 +22,12 @@ CMakeFiles/simulation.dir/src/clothsystem.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 CMakeFiles/simulation.dir/src/main.cpp.o
  ../3rd_party/glfw/include/GLFW/glfw3.h
  ../vecmath/include/Matrix2f.h
@@ -38,16 +38,32 @@ CMakeFiles/simulation.dir/src/main.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/main.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/main.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o
+ ../vecmath/include/Matrix2f.h
+ ../vecmath/include/Matrix3f.h
+ ../vecmath/include/Matrix4f.h
+ ../vecmath/include/Quat4f.h
+ ../vecmath/include/Vector2f.h
+ ../vecmath/include/Vector3f.h
+ ../vecmath/include/Vector4f.h
+ ../vecmath/include/vecmath.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -57,10 +73,10 @@ CMakeFiles/simulation.dir/src/particlesystem.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -70,12 +86,12 @@ CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -85,17 +101,17 @@ CMakeFiles/simulation.dir/src/rigidBall.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 CMakeFiles/simulation.dir/src/starter3_util.cpp.o
  ../3rd_party/glfw/include/GLFW/glfw3.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.h
 CMakeFiles/simulation.dir/src/timestepper.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -105,9 +121,9 @@ CMakeFiles/simulation.dir/src/timestepper.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.h
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o
  ../vecmath/include/Matrix2f.h
  ../vecmath/include/Matrix3f.h
@@ -117,6 +133,6 @@ CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o
  ../vecmath/include/Vector3f.h
  ../vecmath/include/Vector4f.h
  ../vecmath/include/vecmath.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.cpp
- /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.cpp
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h

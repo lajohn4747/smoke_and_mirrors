@@ -1,4 +1,4 @@
-# Install script for directory: /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/3rd_party/glfw/src
+# Install script for directory: /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/3rd_party/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

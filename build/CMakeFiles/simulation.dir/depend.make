@@ -41,12 +41,28 @@ CMakeFiles/simulation.dir/src/main.cpp.o: ../src/camera.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/clothsystem.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/gl.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/simulation.dir/src/main.cpp.o: ../src/mirror.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/particlesystem.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/pendulumsystem.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/rigidBall.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/starter3_util.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/timestepper.h
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/vertexrecorder.h
+
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Matrix2f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Matrix3f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Matrix4f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Quat4f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Vector2f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Vector3f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/Vector4f.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../vecmath/include/vecmath.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/camera.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/gl.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/mirror.cpp
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/mirror.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/particlesystem.h
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o: ../vecmath/include/Matrix2f.h
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o: ../vecmath/include/Matrix3f.h

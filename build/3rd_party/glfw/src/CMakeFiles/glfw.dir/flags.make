@@ -6,5 +6,5 @@ C_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/3rd_party/glfw/include -I/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/3rd_party/glfw/src -I/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/3rd_party/glfw/src 
+C_INCLUDES = -I/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/3rd_party/glfw/include -I/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/3rd_party/glfw/src -I/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/3rd_party/glfw/src 
 

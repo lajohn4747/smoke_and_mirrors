@@ -14,6 +14,7 @@
 #include "pendulumsystem.h"
 #include "clothsystem.h"
 #include "rigidBall.h"
+#include "mirror.h"
 
 using namespace std;
 
@@ -56,6 +57,7 @@ GLuint program_light;
 RigidBall* rigidBall;
 PendulumSystem* pendulumSystem;
 ClothSystem* clothSystem;
+Mirror* mirror;
 
 // Function implementations
 static void keyCallback(GLFWwindow* window, int key,
@@ -187,6 +189,7 @@ void initSystem()
     pendulumSystem = new PendulumSystem();
     clothSystem = new ClothSystem();
     rigidBall = new RigidBall();
+    mirror = new Mirror();
 }
 
 void freeSystem() {
@@ -194,6 +197,7 @@ void freeSystem() {
     delete pendulumSystem; pendulumSystem = nullptr;
     delete clothSystem; clothSystem = nullptr;
     delete rigidBall; rigidBall = nullptr;
+    delete mirror; mirror = nullptr;
 }
 
 void resetTime() {
@@ -227,6 +231,8 @@ void drawSystem()
     //pendulumSystem->draw(gl);
     //clothSystem->draw(gl);
     rigidBall->draw(gl);
+    mirror->draw(gl);
+
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);

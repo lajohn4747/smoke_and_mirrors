@@ -86,43 +86,43 @@ Vector3f.h
 Vector4f.h
 ../vecmath/include/Vector4f.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.cpp
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 iostream
 -
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 vecmath.h
 -
 cstdint
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.cpp
 clothsystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
 vector
 -
 particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 OpenGL/gl3.h
 -
 GL/glew.h
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/main.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/main.cpp
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 GLFW/glfw3.h
 -
 cmath
@@ -136,33 +136,47 @@ iostream
 vector
 -
 vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 starter3_util.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.h
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 timestepper.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.h
 pendulumsystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.h
 clothsystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
 rigidBall.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
+mirror.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.cpp
-particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
-gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.cpp
+mirror.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.h
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
+vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
+
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.h
+particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.cpp
+particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
+camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 random
 -
 cstdio
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 vector
 -
 vecmath.h
@@ -170,39 +184,39 @@ vecmath.h
 cstdint
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.cpp
 pendulumsystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.h
 cassert
 -
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.h
 vector
 -
 particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.cpp
 rigidBall.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
 camera.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.h
 vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
 particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.cpp
 starter3_util.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.h
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 GLFW/glfw3.h
 -
 cstdio
@@ -212,41 +226,41 @@ cstring
 cassert
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.h
 cstdint
 -
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.cpp
 timestepper.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.h
 cstdio
 -
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.h
 vecmath.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vecmath.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vecmath.h
 vector
 -
 particlesystem.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.cpp
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.cpp
 vertexrecorder.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 cassert
 -
 cstdint
 -
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 vector
 -
 vecmath.h
 -
 gl.h
-/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/gl.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 

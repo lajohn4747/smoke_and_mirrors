@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors
+CMAKE_SOURCE_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build
+CMAKE_BINARY_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -229,6 +229,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/mirror.o: src/mirror.cpp.o
+
+.PHONY : src/mirror.o
+
+# target to build an object file
+src/mirror.cpp.o:
+	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/mirror.cpp.o
+.PHONY : src/mirror.cpp.o
+
+src/mirror.i: src/mirror.cpp.i
+
+.PHONY : src/mirror.i
+
+# target to preprocess a source file
+src/mirror.cpp.i:
+	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/mirror.cpp.i
+.PHONY : src/mirror.cpp.i
+
+src/mirror.s: src/mirror.cpp.s
+
+.PHONY : src/mirror.s
+
+# target to generate assembly for a file
+src/mirror.cpp.s:
+	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/mirror.cpp.s
+.PHONY : src/mirror.cpp.s
 
 src/particlesystem.o: src/particlesystem.cpp.o
 
@@ -412,6 +439,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mirror.o"
+	@echo "... src/mirror.i"
+	@echo "... src/mirror.s"
 	@echo "... src/particlesystem.o"
 	@echo "... src/particlesystem.i"
 	@echo "... src/particlesystem.s"

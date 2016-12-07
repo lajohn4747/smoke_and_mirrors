@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simulation.dir/src/particlesystem.cpp.o"
   "CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o"
   "CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
+  "CMakeFiles/simulation.dir/src/mirror.cpp.o"
   "simulation.pdb"
   "simulation"
 )

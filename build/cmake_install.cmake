@@ -1,4 +1,4 @@
-# Install script for directory: /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors
+# Install script for directory: /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,8 +29,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/3rd_party/glfw/cmake_install.cmake")
-  include("/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/vecmath/cmake_install.cmake")
+  include("/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/3rd_party/glfw/cmake_install.cmake")
+  include("/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/vecmath/cmake_install.cmake")
 
 endif()
 
@@ -42,5 +42,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

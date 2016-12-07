@@ -55,6 +55,8 @@ list (APPEND A_SRC
   src/timestepper.cpp
   src/particlesystem.cpp
   src/pendulumsystem.cpp
+  src/rigidBall.cpp
+  src/mirror.cpp
 )
 list (APPEND A_HEADER
   src/gl.h
@@ -65,8 +67,10 @@ list (APPEND A_HEADER
   src/timestepper.h
   src/particlesystem.h
   src/pendulumsystem.h
+  src/rigidBall.h
+  src/mirror.h
 )
 
-add_executable(simulation ${A_SRC} ${A_HEADER} src/rigidBall.h src/rigidBall.cpp)
+add_executable(simulation ${A_SRC} ${A_HEADER})
 target_include_directories(simulation PUBLIC ${A_INCLUDES})
 target_link_libraries(simulation ${A_LIBS})

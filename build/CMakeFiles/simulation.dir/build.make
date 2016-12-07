@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors
+CMAKE_SOURCE_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build
+CMAKE_BINARY_DIR = /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simulation.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/simulation.dir/flags.make
 
 CMakeFiles/simulation.dir/src/main.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulation.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/main.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulation.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/main.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/main.cpp
 
 CMakeFiles/simulation.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/main.cpp > CMakeFiles/simulation.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/main.cpp > CMakeFiles/simulation.dir/src/main.cpp.i
 
 CMakeFiles/simulation.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/main.cpp -o CMakeFiles/simulation.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/main.cpp -o CMakeFiles/simulation.dir/src/main.cpp.s
 
 CMakeFiles/simulation.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/simulation.dir/src/main.cpp.o.provides.build: CMakeFiles/simulation.d
 
 CMakeFiles/simulation.dir/src/starter3_util.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/starter3_util.cpp.o: ../src/starter3_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulation.dir/src/starter3_util.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/starter3_util.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulation.dir/src/starter3_util.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/starter3_util.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.cpp
 
 CMakeFiles/simulation.dir/src/starter3_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/starter3_util.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.cpp > CMakeFiles/simulation.dir/src/starter3_util.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.cpp > CMakeFiles/simulation.dir/src/starter3_util.cpp.i
 
 CMakeFiles/simulation.dir/src/starter3_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/starter3_util.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/starter3_util.cpp -o CMakeFiles/simulation.dir/src/starter3_util.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/starter3_util.cpp -o CMakeFiles/simulation.dir/src/starter3_util.cpp.s
 
 CMakeFiles/simulation.dir/src/starter3_util.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/simulation.dir/src/starter3_util.cpp.o.provides.build: CMakeFiles/sim
 
 CMakeFiles/simulation.dir/src/camera.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/camera.cpp.o: ../src/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulation.dir/src/camera.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/camera.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulation.dir/src/camera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/camera.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.cpp
 
 CMakeFiles/simulation.dir/src/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/camera.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.cpp > CMakeFiles/simulation.dir/src/camera.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.cpp > CMakeFiles/simulation.dir/src/camera.cpp.i
 
 CMakeFiles/simulation.dir/src/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/camera.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/camera.cpp -o CMakeFiles/simulation.dir/src/camera.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/camera.cpp -o CMakeFiles/simulation.dir/src/camera.cpp.s
 
 CMakeFiles/simulation.dir/src/camera.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/simulation.dir/src/camera.cpp.o.provides.build: CMakeFiles/simulation
 
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o: ../src/vertexrecorder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.cpp
 
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/vertexrecorder.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.cpp > CMakeFiles/simulation.dir/src/vertexrecorder.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.cpp > CMakeFiles/simulation.dir/src/vertexrecorder.cpp.i
 
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/vertexrecorder.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/vertexrecorder.cpp -o CMakeFiles/simulation.dir/src/vertexrecorder.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.cpp -o CMakeFiles/simulation.dir/src/vertexrecorder.cpp.s
 
 CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o.provides.build: CMakeFiles/si
 
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/clothsystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulation.dir/src/clothsystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/clothsystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulation.dir/src/clothsystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/clothsystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.cpp
 
 CMakeFiles/simulation.dir/src/clothsystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/clothsystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.cpp > CMakeFiles/simulation.dir/src/clothsystem.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.cpp > CMakeFiles/simulation.dir/src/clothsystem.cpp.i
 
 CMakeFiles/simulation.dir/src/clothsystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/clothsystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/clothsystem.cpp -o CMakeFiles/simulation.dir/src/clothsystem.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.cpp -o CMakeFiles/simulation.dir/src/clothsystem.cpp.s
 
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/simulation.dir/src/clothsystem.cpp.o.provides.build: CMakeFiles/simul
 
 CMakeFiles/simulation.dir/src/timestepper.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/timestepper.cpp.o: ../src/timestepper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulation.dir/src/timestepper.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/timestepper.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulation.dir/src/timestepper.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/timestepper.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.cpp
 
 CMakeFiles/simulation.dir/src/timestepper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/timestepper.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.cpp > CMakeFiles/simulation.dir/src/timestepper.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.cpp > CMakeFiles/simulation.dir/src/timestepper.cpp.i
 
 CMakeFiles/simulation.dir/src/timestepper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/timestepper.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/timestepper.cpp -o CMakeFiles/simulation.dir/src/timestepper.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/timestepper.cpp -o CMakeFiles/simulation.dir/src/timestepper.cpp.s
 
 CMakeFiles/simulation.dir/src/timestepper.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/simulation.dir/src/timestepper.cpp.o.provides.build: CMakeFiles/simul
 
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o: ../src/particlesystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulation.dir/src/particlesystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/particlesystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulation.dir/src/particlesystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/particlesystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.cpp
 
 CMakeFiles/simulation.dir/src/particlesystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/particlesystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.cpp > CMakeFiles/simulation.dir/src/particlesystem.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.cpp > CMakeFiles/simulation.dir/src/particlesystem.cpp.i
 
 CMakeFiles/simulation.dir/src/particlesystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/particlesystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/particlesystem.cpp -o CMakeFiles/simulation.dir/src/particlesystem.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.cpp -o CMakeFiles/simulation.dir/src/particlesystem.cpp.s
 
 CMakeFiles/simulation.dir/src/particlesystem.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/simulation.dir/src/particlesystem.cpp.o.provides.build: CMakeFiles/si
 
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o: ../src/pendulumsystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.cpp
 
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/pendulumsystem.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.cpp > CMakeFiles/simulation.dir/src/pendulumsystem.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.cpp > CMakeFiles/simulation.dir/src/pendulumsystem.cpp.i
 
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/pendulumsystem.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/pendulumsystem.cpp -o CMakeFiles/simulation.dir/src/pendulumsystem.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/pendulumsystem.cpp -o CMakeFiles/simulation.dir/src/pendulumsystem.cpp.s
 
 CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.provides.build: CMakeFiles/si
 
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o: CMakeFiles/simulation.dir/flags.make
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o: ../src/rigidBall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/rigidBall.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/rigidBall.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.cpp
 
 CMakeFiles/simulation.dir/src/rigidBall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/rigidBall.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp > CMakeFiles/simulation.dir/src/rigidBall.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.cpp > CMakeFiles/simulation.dir/src/rigidBall.cpp.i
 
 CMakeFiles/simulation.dir/src/rigidBall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/rigidBall.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/src/rigidBall.cpp -o CMakeFiles/simulation.dir/src/rigidBall.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.cpp -o CMakeFiles/simulation.dir/src/rigidBall.cpp.s
 
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o.requires:
 
@@ -273,6 +273,30 @@ CMakeFiles/simulation.dir/src/rigidBall.cpp.o.provides: CMakeFiles/simulation.di
 CMakeFiles/simulation.dir/src/rigidBall.cpp.o.provides.build: CMakeFiles/simulation.dir/src/rigidBall.cpp.o
 
 
+CMakeFiles/simulation.dir/src/mirror.cpp.o: CMakeFiles/simulation.dir/flags.make
+CMakeFiles/simulation.dir/src/mirror.cpp.o: ../src/mirror.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/simulation.dir/src/mirror.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulation.dir/src/mirror.cpp.o -c /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.cpp
+
+CMakeFiles/simulation.dir/src/mirror.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulation.dir/src/mirror.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.cpp > CMakeFiles/simulation.dir/src/mirror.cpp.i
+
+CMakeFiles/simulation.dir/src/mirror.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulation.dir/src/mirror.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/mirror.cpp -o CMakeFiles/simulation.dir/src/mirror.cpp.s
+
+CMakeFiles/simulation.dir/src/mirror.cpp.o.requires:
+
+.PHONY : CMakeFiles/simulation.dir/src/mirror.cpp.o.requires
+
+CMakeFiles/simulation.dir/src/mirror.cpp.o.provides: CMakeFiles/simulation.dir/src/mirror.cpp.o.requires
+	$(MAKE) -f CMakeFiles/simulation.dir/build.make CMakeFiles/simulation.dir/src/mirror.cpp.o.provides.build
+.PHONY : CMakeFiles/simulation.dir/src/mirror.cpp.o.provides
+
+CMakeFiles/simulation.dir/src/mirror.cpp.o.provides.build: CMakeFiles/simulation.dir/src/mirror.cpp.o
+
+
 # Object files for target simulation
 simulation_OBJECTS = \
 "CMakeFiles/simulation.dir/src/main.cpp.o" \
@@ -283,7 +307,8 @@ simulation_OBJECTS = \
 "CMakeFiles/simulation.dir/src/timestepper.cpp.o" \
 "CMakeFiles/simulation.dir/src/particlesystem.cpp.o" \
 "CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o" \
-"CMakeFiles/simulation.dir/src/rigidBall.cpp.o"
+"CMakeFiles/simulation.dir/src/rigidBall.cpp.o" \
+"CMakeFiles/simulation.dir/src/mirror.cpp.o"
 
 # External object files for target simulation
 simulation_EXTERNAL_OBJECTS =
@@ -297,11 +322,12 @@ simulation: CMakeFiles/simulation.dir/src/timestepper.cpp.o
 simulation: CMakeFiles/simulation.dir/src/particlesystem.cpp.o
 simulation: CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o
 simulation: CMakeFiles/simulation.dir/src/rigidBall.cpp.o
+simulation: CMakeFiles/simulation.dir/src/mirror.cpp.o
 simulation: CMakeFiles/simulation.dir/build.make
 simulation: 3rd_party/glfw/src/libglfw3.a
 simulation: vecmath/libvecmath.a
 simulation: CMakeFiles/simulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable simulation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -318,6 +344,7 @@ CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/timestepper.cp
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/particlesystem.cpp.o.requires
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o.requires
 CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/rigidBall.cpp.o.requires
+CMakeFiles/simulation.dir/requires: CMakeFiles/simulation.dir/src/mirror.cpp.o.requires
 
 .PHONY : CMakeFiles/simulation.dir/requires
 
@@ -326,6 +353,6 @@ CMakeFiles/simulation.dir/clean:
 .PHONY : CMakeFiles/simulation.dir/clean
 
 CMakeFiles/simulation.dir/depend:
-	cd /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build /Users/johnla/Documents/Senior_Fall/FinalProjects/6.837Final/smoke_and_mirrors/build/CMakeFiles/simulation.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/build/CMakeFiles/simulation.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/simulation.dir/depend
 
