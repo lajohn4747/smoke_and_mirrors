@@ -9,6 +9,7 @@
 // Initialize the ball with a start state
 RigidBall::RigidBall() {
     m_vVecState.push_back(Vector3f(0.0f, 4.0f, 0.0));
+    radius = 0.25f;
 }
 
 // Get the gravity force of the rigid ball
@@ -23,12 +24,20 @@ std::vector<Vector3f> RigidBall::evalF(std::vector<Vector3f> state) {
     return f;
 }
 
+float RigidBall::getRadius() {
+    return radius;
+}
+
+Vector3f RigidBall::getCenter() {
+    return getState()[0];
+}
+
 void RigidBall::draw(GLProgram &gl) {
     const Vector3f PARTICLE_COLOR(0.4f, 0.7f, 1.0f);
     gl.updateMaterial(PARTICLE_COLOR);
     Vector3f pos = getState()[0];
     gl.updateModelMatrix(Matrix4f::translation(pos));
-    drawSphere(.5f, 30, 10);
+    drawSphere(radius, 30, 10);
 }
 //TODO Collision detection
 bool RigidBall::checkCollision() {

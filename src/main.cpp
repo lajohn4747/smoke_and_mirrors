@@ -187,8 +187,8 @@ void initSystem()
     }
 
     pendulumSystem = new PendulumSystem();
-    clothSystem = new ClothSystem();
     rigidBall = new RigidBall();
+    clothSystem = new ClothSystem(rigidBall);
     mirror = new Mirror();
 }
 

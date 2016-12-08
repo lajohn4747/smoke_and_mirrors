@@ -7,8 +7,9 @@ const int W = 8;
 const int H = 8;
 
 using namespace std;
-ClothSystem::ClothSystem()
+ClothSystem::ClothSystem(RigidBall *ball)
 {
+    RigidBall clothBall = *ball;
     // TODO 5. Initialize m_vVecState with cloth particles. 
     // You can again use rand_uniform(lo, hi) to make things a bit more interesting
     for (unsigned i = 0; i < H; ++i){
@@ -19,6 +20,10 @@ ClothSystem::ClothSystem()
             m_vVecState.push_back(v);
         }
     }
+}
+
+Vector3f ClothSystem::checkCollisions(Vector3f pos) {
+    float dist = pos - clothBall.getCenter();
 }
 
 Vector3f ClothSystem::computeGravity(float mass){

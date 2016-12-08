@@ -4,20 +4,26 @@
 #include <vector>
 
 #include "particlesystem.h"
+#include "rigidBall.h"
 
 class ClothSystem : public ParticleSystem
 {
     ///ADD MORE FUNCTION AND FIELDS HERE
 public:
-    ClothSystem();
+    ClothSystem(RigidBall *ball);
 
     // evalF is called by the integrator at least once per time step
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
+
+    //clothBall Reference
+    RigidBall clothBall;
 
     // draw is called once per frame
     void draw(GLProgram& ctx);
 
 private:
+    // Collisions
+    bool checkCollisions(Vector3f pos);
     Vector3f computeGravity(float mass);
     Vector3f computeDrag(float k, Vector3f velocity);
     Vector3f computeSpring(float k, float r, int icol, int irow, int jcol, int jrow, std::vector<Vector3f> pos);
