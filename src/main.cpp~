@@ -229,7 +229,7 @@ void drawSystem()
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
     //pendulumSystem->draw(gl);
-    clothSystem->draw(gl);
+    //clothSystem->draw(gl);
     rigidBall->draw(gl);
     mirror->draw(gl);
 

@@ -167,14 +167,27 @@ void ClothSystem::draw(GLProgram& gl)
     */
 
     vector<Vector3f> positions = getPositions(getState());
-    /*for(unsigned i = 0; i < positions.size(); ++i){
+    for(unsigned i = 0; i < positions.size(); ++i){
         gl.updateModelMatrix(Matrix4f::translation((positions[i])));
         drawSphere(0.04f, 8, 8);
-    }*/
+    }
     
     const Vector3f N(0, 1, 0);
     VertexRecorder rec;
+    /*Vector3f p1 = positions[0];
+    Vector3f p2 = positions[0+1]; 
+    Vector3f p3 = positions[0+8];
+    Vector3f p4 = positions[0+8+1]; 
+    rec.record(p1, N);
+    rec.record(p2, N);
+    rec.record(p3, N);
 
+    rec.record(p2, N);
+    rec.record(p3, N);
+    rec.record(p4, N);
+
+    rec.draw();
+    */
     gl.updateModelMatrix(Matrix4f::identity());
     for(unsigned i = 1; i < positions.size() - W; ++i){
 	if(i % W != 0){

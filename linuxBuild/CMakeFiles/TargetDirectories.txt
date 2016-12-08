@@ -1,0 +1,3 @@
+/afs/athena.mit.edu/user/j/o/johnla/Documents/6.837/smoke_and_mirrors/linuxBuild/3rd_party/glfw/src/CMakeFiles/glfw.dir
+/afs/athena.mit.edu/user/j/o/johnla/Documents/6.837/smoke_and_mirrors/linuxBuild/CMakeFiles/simulation.dir
+/afs/athena.mit.edu/user/j/o/johnla/Documents/6.837/smoke_and_mirrors/linuxBuild/vecmath/CMakeFiles/vecmath.dir
