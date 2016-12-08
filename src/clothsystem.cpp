@@ -13,7 +13,7 @@ ClothSystem::ClothSystem()
     // You can again use rand_uniform(lo, hi) to make things a bit more interesting
     for (unsigned i = 0; i < H; ++i){
         for (unsigned j = 0; j < W; ++j){
-            Vector3f pos = Vector3f(0.2*j + 0.5, 0, -0.2*i -0.5);
+            Vector3f pos = Vector3f(0.2*j - 0.8, 0, -0.2*i + 0.8 );
             Vector3f v = Vector3f(0,0,0);
             m_vVecState.push_back(pos);
             m_vVecState.push_back(v);
@@ -117,7 +117,7 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
             //pickVel(i,j,velocities).print();
             f.push_back(pickVel(i, j, velocities));
             //printf("%d %d\n", i, j);
-            if (i == 0 && (j == 0 || j == W-1)) {
+            if ((i == 0 || i == H -1) && (j == 0 || j == W-1)) {
                 allForces = Vector3f(0,0,0);
                 //Vector3f allForces = computeGravity(mass) + computeDrag(drag, pickVel(i,j,velocities)) +
                 //computeFlexString(i, j, positions) + computeShearString(i,j, positions) + computeStructString(i,j, positions);

@@ -14,73 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0609bf-cf4a-40f7-9ab7-966cf5cdbbf0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/context.c.o" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/context.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/input.c.o" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/input.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.o" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/window.c.o" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/window.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/libglfw3.a" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/libglfw3.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/camera.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/camera.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/clothsystem.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/clothsystem.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/main.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/particlesystem.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/particlesystem.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/pendulumsystem.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/rigidBall.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/rigidBall.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/starter3_util.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/starter3_util.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/timestepper.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/timestepper.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/src/vertexrecorder.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/simulation" afterPath="$PROJECT_DIR$/build/simulation" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix2f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix2f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix3f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix3f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix4f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Matrix4f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Quat4f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Quat4f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector2f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector2f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector3f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector3f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector4f.cpp.o" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/Vector4f.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/libvecmath.a" afterPath="$PROJECT_DIR$/build/vecmath/libvecmath.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/smoke_and_mirrors.iml" afterPath="$PROJECT_DIR$/.idea/smoke_and_mirrors.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/Makefile" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/cmake_install.cmake" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/C.includecache" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/build.make" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/depend.internal" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/flags.make" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/CMakeFiles/glfw.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/Makefile" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/3rd_party/glfw/src/cmake_install.cmake" afterPath="$PROJECT_DIR$/build/3rd_party/glfw/src/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeCache.txt" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/CXX.includecache" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/build.make" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/depend.internal" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/depend.make" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/flags.make" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/link.txt" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/progress.make" afterPath="$PROJECT_DIR$/build/CMakeFiles/simulation.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Makefile" afterPath="$PROJECT_DIR$/build/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/cmake_install.cmake" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/CXX.includecache" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/build.make" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/depend.internal" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/flags.make" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/progress.make" afterPath="$PROJECT_DIR$/build/vecmath/CMakeFiles/vecmath.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/Makefile" afterPath="$PROJECT_DIR$/build/vecmath/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/vecmath/cmake_install.cmake" afterPath="$PROJECT_DIR$/build/vecmath/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vertexrecorder.cpp" afterPath="$PROJECT_DIR$/src/vertexrecorder.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/clothsystem.cpp" afterPath="$PROJECT_DIR$/src/clothsystem.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rigidBall.cpp" afterPath="$PROJECT_DIR$/src/rigidBall.cpp" />
     </list>
     <ignored path="smoke_and_mirrors.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,10 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-960">
+            <state relative-caret-position="-150">
               <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -127,20 +66,32 @@
       <file leaf-file-name="rigidBall.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rigidBall.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rigidBall.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rigidBall.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rigidBall.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
               <folding>
                 <element signature="e#42#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clothsystem.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/clothsystem.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,7 +122,7 @@
       <file leaf-file-name="vertexrecorder.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vertexrecorder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
+            <state relative-caret-position="2160">
               <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding />
             </state>
@@ -181,7 +132,7 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="870">
               <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
               <folding />
             </state>
@@ -196,15 +147,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/clothsystem.cpp" />
         <option value="$PROJECT_DIR$/src/rigidBall.h" />
-        <option value="$PROJECT_DIR$/src/rigidBall.cpp" />
         <option value="$PROJECT_DIR$/mirror.h" />
         <option value="$PROJECT_DIR$/src/mirror.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/vertexrecorder.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/mirror.cpp" />
+        <option value="$PROJECT_DIR$/src/clothsystem.cpp" />
+        <option value="$PROJECT_DIR$/src/rigidBall.cpp" />
       </list>
     </option>
   </component>
@@ -486,11 +437,12 @@
       <updated>1480137998218</updated>
       <workItem from="1480138000570" duration="8237000" />
       <workItem from="1480448307648" duration="2385000" />
+      <workItem from="1481171946738" duration="1130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10622000" />
+    <option name="totallyTimeSpent" value="11752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -531,6 +483,78 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smokeSystem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rigidBall.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rigidBall.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <element signature="e#42#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mirror.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mirror.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vertexrecorder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
@@ -642,16 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/clothsystem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/simplesystem.cpp" />
     <entry file="file://$PROJECT_DIR$/src/simplesystem.h" />
     <entry file="file://$PROJECT_DIR$/src/clothsystem.h">
@@ -668,13 +682,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="870">
           <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
           <folding />
         </state>
@@ -684,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,16 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vertexrecorder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
+        <state relative-caret-position="2160">
           <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rigidBall.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -732,22 +736,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rigidBall.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        <state relative-caret-position="-150">
+          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
           <folding>
-            <element signature="e#42#64#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/rigidBall.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960">
-          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+        <state relative-caret-position="375">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clothsystem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rigidBall.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#42#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

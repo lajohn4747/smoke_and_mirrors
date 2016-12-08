@@ -8,7 +8,7 @@
 
 // Initialize the ball with a start state
 RigidBall::RigidBall() {
-    m_vVecState.push_back(Vector3f(0.0f, 0.0, 0.0));
+    m_vVecState.push_back(Vector3f(0.0f, 4.0f, 0.0));
 }
 
 // Get the gravity force of the rigid ball
