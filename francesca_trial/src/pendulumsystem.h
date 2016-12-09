@@ -10,6 +10,15 @@ class PendulumSystem : public ParticleSystem
 public:
     PendulumSystem();
 
+    //kernel function calculations
+    float calcW(Vector3f r);
+    Vector3f calcGradientW(Vector3f r);
+    float calcLaplacianW(Vector3f r);
+
+    float calculateDensity(std::vector<Vector3f> state, Vector3f x_i);
+    Vector3f calculatePressureForce(std::vector<Vector3f> state, Vector3f x_i, float p, float rho);
+    Vector3f calculateViscosityForce(std::vector<Vector3f> state, Vector3f x_i, Vector3f v_i, float rho);
+
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
     void draw(GLProgram&);
 
