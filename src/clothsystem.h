@@ -1,6 +1,6 @@
 #ifndef CLOTHSYSTEM_H
 #define CLOTHSYSTEM_H
-#pragma once
+
 #include <vector>
 
 #include "particlesystem.h"
@@ -15,14 +15,17 @@ public:
     // evalF is called by the integrator at least once per time step
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
 
-    //clothBall Reference
-
+    //ball Reference
+    bool ballNearby = false;
+    Vector3f ballPosition = Vector3f::ZERO;
+    //force to deliver
+    Vector3f returnForce = Vector3f::ZERO;
     // draw is called once per frame
     void draw(GLProgram& ctx);
 
 private:
     // Collisions
-    bool checkCollisions(Vector3f pos);
+    bool isColliding(Vector3f pos);
     Vector3f computeGravity(float mass);
     Vector3f computeDrag(float k, Vector3f velocity);
     Vector3f computeSpring(float k, float r, int icol, int irow, int jcol, int jrow, std::vector<Vector3f> pos);

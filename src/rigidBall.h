@@ -21,6 +21,8 @@ public:
     // Check if collision occurs
     bool checkCollision();
 
+    bool isColliding = false;
+    Vector3f extraForces = Vector3f::ZERO;
     Vector3f getCenter();
     float radius;
     float getRadius();
@@ -29,4 +31,5 @@ public:
 private:
     // Gravity on the ball
     Vector3f computeGravity(float mass);
+    Vector3f computeDrag(float k, Vector3f velocity);
 };

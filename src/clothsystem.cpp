@@ -21,6 +21,10 @@ ClothSystem::ClothSystem()
     }
 }
 
+bool ClothSystem::isColliding(Vector3f pos){
+    float dist = (pos - ballPosition).abs();
+    return dist <= 0.25f;
+}
 
 Vector3f ClothSystem::computeGravity(float mass){
     return mass * Vector3f(0,-9.8, 0);
@@ -106,12 +110,13 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 {
     float mass = 0.06;
     float drag = .11;
-
+    returnForce = Vector3f::ZERO;
 
     vector<Vector3f> positions = getPositions(state);
     vector<Vector3f> velocities = getVelocities(state);
     std::vector<Vector3f> f;
     Vector3f allForces;
+    Vector3f structureForces;
 
     for(unsigned i = 0; i < H; ++i){
         for(unsigned j = 0; j < W; j++){
@@ -121,9 +126,16 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
             if ((i == 0 || i == H -1) && (j == 0 || j == W-1)) {
                 allForces = Vector3f(0,0,0);
             } else {
+                structureForces =  computeStructString(i, j, positions) + computeShearString(i,j,positions) +
+                                   computeFlexString(i, j, positions);
                 allForces = (computeGravity(mass) + computeDrag(drag, pickVel(i, j, velocities)) +
-                        computeStructString(i, j, positions) + computeShearString(i,j,positions) +
-                        computeFlexString(i, j, positions))/(mass);
+                       structureForces)/(mass);
+                if(ballNearby) {
+                    if(isColliding(pickPos(i,j,positions))) {
+                        returnForce += Vector3f(0,.01f,0);
+                        allForces += Vector3f(0,-100.0f,0);
+                    }
+                }
             }
             f.push_back(allForces);
         }

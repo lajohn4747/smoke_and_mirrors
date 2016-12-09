@@ -216,6 +216,18 @@ void stepSystem()
         timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
         timeStepper->takeStep(rigidBall, h);
+        if(rigidBall->getCenter().y() <= .25f && rigidBall->getCenter().y() > -1.0f){
+            //printf("%s\n", "ball is close");
+            rigidBall->isColliding = true;
+            clothSystem->ballPosition = rigidBall->getCenter();
+            clothSystem->ballNearby = true;
+            rigidBall->extraForces = clothSystem->returnForce;
+            //rigidBall->extraForces.print();
+            //clothSystem->returnForce.print();
+        } else {
+            rigidBall->isColliding = false;
+            clothSystem->ballNearby = false;
+        }
         simulated_s += h;
     }
 }
