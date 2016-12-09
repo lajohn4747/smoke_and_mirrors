@@ -1,6 +1,6 @@
 #ifndef CLOTHSYSTEM_H
 #define CLOTHSYSTEM_H
-
+#pragma once
 #include <vector>
 
 #include "particlesystem.h"
@@ -10,13 +10,12 @@ class ClothSystem : public ParticleSystem
 {
     ///ADD MORE FUNCTION AND FIELDS HERE
 public:
-    ClothSystem(RigidBall *ball);
+    ClothSystem();
 
     // evalF is called by the integrator at least once per time step
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
 
     //clothBall Reference
-    RigidBall clothBall;
 
     // draw is called once per frame
     void draw(GLProgram& ctx);

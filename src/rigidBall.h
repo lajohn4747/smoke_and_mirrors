@@ -1,7 +1,7 @@
 //
 // Created by John La on 11/26/16.
 //
-
+#pragma once
 #ifndef SIMULATION_RIGIDBALL_H
 #define SIMULATION_RIGIDBALL_H
 
@@ -24,6 +24,7 @@ public:
     Vector3f getCenter();
     float radius;
     float getRadius();
+    Vector3f center;
 
 private:
     // Gravity on the ball

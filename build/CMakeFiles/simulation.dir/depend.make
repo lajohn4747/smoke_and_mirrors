@@ -26,6 +26,7 @@ CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/clothsystem.cpp
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/clothsystem.h
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/gl.h
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/particlesystem.h
+CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/rigidBall.h
 CMakeFiles/simulation.dir/src/clothsystem.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/simulation.dir/src/main.cpp.o: ../3rd_party/glfw/include/GLFW/glfw3.h

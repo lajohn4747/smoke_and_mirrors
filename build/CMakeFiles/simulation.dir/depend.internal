@@ -27,6 +27,7 @@ CMakeFiles/simulation.dir/src/clothsystem.cpp.o
  /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/clothsystem.h
  /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
  /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+ /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
  /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/vertexrecorder.h
 CMakeFiles/simulation.dir/src/main.cpp.o
  ../3rd_party/glfw/include/GLFW/glfw3.h

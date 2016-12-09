@@ -7,10 +7,9 @@ const int W = 8;
 const int H = 8;
 
 using namespace std;
-ClothSystem::ClothSystem(RigidBall *ball)
+ClothSystem::ClothSystem()
 {
-    RigidBall clothBall = *ball;
-    // TODO 5. Initialize m_vVecState with cloth particles. 
+    // TODO 5. Initialize m_vVecState with cloth particles.
     // You can again use rand_uniform(lo, hi) to make things a bit more interesting
     for (unsigned i = 0; i < H; ++i){
         for (unsigned j = 0; j < W; ++j){
@@ -22,9 +21,6 @@ ClothSystem::ClothSystem(RigidBall *ball)
     }
 }
 
-Vector3f ClothSystem::checkCollisions(Vector3f pos) {
-    float dist = pos - clothBall.getCenter();
-}
 
 Vector3f ClothSystem::computeGravity(float mass){
     return mass * Vector3f(0,-9.8, 0);
@@ -124,23 +120,14 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
             //printf("%d %d\n", i, j);
             if ((i == 0 || i == H -1) && (j == 0 || j == W-1)) {
                 allForces = Vector3f(0,0,0);
-                //Vector3f allForces = computeGravity(mass) + computeDrag(drag, pickVel(i,j,velocities)) +
-                //computeFlexString(i, j, positions) + computeShearString(i,j, positions) + computeStructString(i,j, positions);
             } else {
                 allForces = (computeGravity(mass) + computeDrag(drag, pickVel(i, j, velocities)) +
                         computeStructString(i, j, positions) + computeShearString(i,j,positions) +
                         computeFlexString(i, j, positions))/(mass);
-                //allForces.print();
             }
             f.push_back(allForces);
         }
     }
-    // TODO 5. implement evalF
-    // - gravity
-    // - viscous drag
-    // - structural springs
-    // - shear springs
-    // - flexion springs
      
     return f;
 }
@@ -148,28 +135,10 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 
 void ClothSystem::draw(GLProgram& gl)
 {
-    //TODO 5: render the system 
-    //         - ie draw the particles as little spheres
-    //         - or draw the springs as little lines or cylinders
-    //         - or draw wireframe mesh
 
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
     gl.updateMaterial(CLOTH_COLOR);
 
-    /*
-    // EXAMPLE for how to render cloth particles.
-    //  - you should replace this code.
-    float w = 0.2f;
-    Vector3f O(0.4f, 1, 0);
-    gl.updateModelMatrix(Matrix4f::translation(O));
-    drawSphere(0.04f, 8, 8);
-    gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, 0, 0)));
-    drawSphere(0.04f, 8, 8);
-    gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, -w, 0)));
-    drawSphere(0.04f, 8, 8);
-    gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(0, -w, 0)));
-    drawSphere(0.04f, 8, 8);
-    */
 
     vector<Vector3f> positions = getPositions(getState());
     /*for(unsigned i = 0; i < positions.size(); ++i){
@@ -199,38 +168,6 @@ void ClothSystem::draw(GLProgram& gl)
 	}
     }
 
-    /*
-    // EXAMPLE: This shows you how to render lines to debug the spring system.
-    //
-    //          You should replace this code.
-    //
-    //          Since lines don't have a clearly defined normal, we can't use
-    //          a regular lighting model.
-    //          GLprogram has a "color only" mode, where illumination
-    //          is disabled, and you specify color directly as vertex attribute.
-    //          Note: enableLighting/disableLighting invalidates uniforms,
-    //          so you'll have to update the transformation/material parameters
-    //          after a mode change.
-    gl.disableLighting();
-    gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
-    VertexRecorder rec;
-    rec.record(O, CLOTH_COLOR);
-    rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
-
-    rec.record(O, CLOTH_COLOR);
-    rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
-
-    rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
-    rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
-
-    rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
-    rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
-    glLineWidth(3.0f);
-    rec.draw(GL_LINES);
-
-    gl.enableLighting(); // reset to default lighting model
-    // EXAMPLE END
-     */
 
     /*
     gl.disableLighting();

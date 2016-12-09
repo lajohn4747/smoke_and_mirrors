@@ -113,6 +113,8 @@ vector
 -
 particlesystem.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/particlesystem.h
+rigidBall.h
+/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/rigidBall.h
 
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/src/gl.h
 OpenGL/gl3.h
