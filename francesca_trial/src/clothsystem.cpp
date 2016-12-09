@@ -9,16 +9,16 @@ using namespace std;
 
 
  // your system should at least contain 8x8 particles.
-const int W = 8;
-const int H = 8;
-const float MASS = 0.035;
+const int W = 20;
+const int H = 20;
+const float MASS = 0.0035;
 const float GRAVITY_CONST = 9.80665;
 const float K_DRAG = 0.15;
-const float STRUCTURAL_REST = 0.3;
+const float STRUCTURAL_REST = 0.1;
 const float STRUCTURAL_K = 20.0;
-const float SHEAR_REST = 0.424264;
+const float SHEAR_REST = 0.141421;
 const float SHEAR_K = 30.0;
-const float FLEXION_REST = 0.6;
+const float FLEXION_REST = 0.2;
 const float FLEXION_K = 30.0;
 
 ClothSystem::ClothSystem()
@@ -27,12 +27,12 @@ ClothSystem::ClothSystem()
 	// You can again use rand_uniform(lo, hi) to make things a bit more interesting
 
 	//state has structure: position1, velocity1, position2, velocity2, ...
-	float x_value = -1.05f;
-	float z_value = -1.05f;
+	float x_value = -1.0f;
+	float z_value = -1.0f;
 	for (unsigned int i=0; i<W; i++) {
-		float thisX = x_value+(i*0.3f);
+		float thisX = x_value+(i*0.1f);
 		for (unsigned int j=0; j<H; j++) {
-			float thisZ = z_value+(j*0.3f);
+			float thisZ = z_value+(j*0.1f);
 			m_vVecState.push_back(Vector3f (thisX,0.0f,thisZ)); //position
 			m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity
 		}
