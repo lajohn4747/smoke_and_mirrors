@@ -1,4 +1,4 @@
-#include "gl.h"
+   #include "gl.h"
 #include <GLFW/glfw3.h>
 
 #include <cmath>
@@ -14,6 +14,7 @@
 #include "simplesystem.h"
 #include "pendulumsystem.h"
 #include "clothsystem.h"
+#include "prerender.h"
 
 using namespace std;
 
@@ -56,6 +57,7 @@ GLuint program_light;
 SimpleSystem* simpleSystem;
 PendulumSystem* pendulumSystem;
 ClothSystem* clothSystem;
+PrerenderSystem* preSystem;
 
 // Function implementations
 static void keyCallback(GLFWwindow* window, int key,
@@ -190,6 +192,8 @@ void initSystem()
     pendulumSystem = new PendulumSystem();
     // TODO customize initialization of cloth system
     clothSystem = new ClothSystem();
+    // TODO start prerender system
+    preSystem = new PrerenderSystem();
 }
 
 void freeSystem() {
@@ -197,6 +201,7 @@ void freeSystem() {
     delete timeStepper; timeStepper = nullptr;
     delete pendulumSystem; pendulumSystem = nullptr;
     delete clothSystem; clothSystem = nullptr;
+    delete preSystem; preSystem = nullptr;
 }
 
 void resetTime() {
@@ -214,6 +219,7 @@ void stepSystem()
         timeStepper->takeStep(simpleSystem, h);
         timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
+        //timeStepper->takeStep(preSystem, h);
         simulated_s += h;
     }
 }
