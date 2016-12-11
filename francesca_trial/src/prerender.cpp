@@ -81,9 +81,31 @@ void PrerenderSystem::draw(GLProgram& gl) {
         const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
         gl.updateMaterial(CLOTH_COLOR);
 
-        for (unsigned int j = 0; j < CLOTH_PARTICLES; j++){
+        /*for (unsigned int j = 0; j < CLOTH_PARTICLES; j++){
             gl.updateModelMatrix(Matrix4f::translation(allPositionsCloth[j + CLOTH_PARTICLES*currentIterationCloth]));
             drawSphere(0.04f, 8, 8);
+        }*/
+        gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
+        VertexRecorder rec;
+        for(unsigned k = 1; k < CLOTH_PARTICLES - 20; ++k){
+            if(k % 20 != 0){
+                Vector3f p1 = allPositionsCloth[k-1 + CLOTH_PARTICLES*currentIterationCloth];
+                Vector3f p2 = allPositionsCloth[k + CLOTH_PARTICLES*currentIterationCloth];
+                Vector3f p3 = allPositionsCloth[k+20-1 + CLOTH_PARTICLES*currentIterationCloth];
+                Vector3f p4 = allPositionsCloth[k+20 + CLOTH_PARTICLES*currentIterationCloth];
+                Vector3f N1 = Vector3f::cross( p3 - p1, p2 - p1);
+                const Vector3f N(0, 1, 0);
+                rec.record(p1, N);
+                rec.record(p2, N);
+                rec.record(p3, N);
+
+                Vector3f N2 = Vector3f::cross(p3 - p2, p4 - p2);
+                rec.record(p2, N);
+                rec.record(p3, N);
+                rec.record(p4, N);
+
+                rec.draw();
+            }
         }
     }
 

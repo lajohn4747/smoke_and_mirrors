@@ -238,6 +238,7 @@ void drawSystem()
     clothSystem->draw(gl);
     //preSystem->draw(gl);
 
+
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);
     gl.updateModelMatrix(Matrix4f::translation(0, -5.0f, 0));
