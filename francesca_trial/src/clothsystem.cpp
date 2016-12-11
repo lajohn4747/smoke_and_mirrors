@@ -333,31 +333,25 @@ void ClothSystem::draw(GLProgram& gl)
 
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
     gl.updateMaterial(CLOTH_COLOR);
-
+	vector<Vector3f> pos;
     // EXAMPLE for how to render cloth particles.
     //  - you should replace this code.
     //float w = 0.2f;
     //Vector3f O(0.4f, 1, 0);
 
     for (unsigned int i=0; i<m_vVecState.size(); i++) {
-	if (i%2 == 0) {
-		if (i==m_vVecState.size()-2) {
-			gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-    			drawSphere(0.25f, 20, 20);
-		}else {
-			gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-    			drawSphere(0.04f, 8, 8);
+		if (i%2 == 0) {
+			if (i==m_vVecState.size()-2) {
+				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				drawSphere(0.25f, 20, 20);
+			} else {
+				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				pos.push_back(m_vVecState[i]);
+				//drawSphere(0.04f, 8, 8);
+			}
 		}
-	}
     }
-    //gl.updateModelMatrix(Matrix4f::translation(O));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, 0, 0)));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, -w, 0)));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(0, -w, 0)));
-    //drawSphere(0.04f, 8, 8);
+
 
     // EXAMPLE: This shows you how to render lines to debug the spring system.
     //
@@ -373,7 +367,30 @@ void ClothSystem::draw(GLProgram& gl)
     gl.disableLighting();
     gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
     VertexRecorder rec;
-	
+
+    const Vector3f N(0, 1, 0);
+
+    for(unsigned i = 1; i < pos.size() - W; ++i){
+        if(i % W != 0){
+            Vector3f p1 = pos[i-1];
+            Vector3f p2 = pos[i];
+            Vector3f p3 = pos[i+W-1];
+            Vector3f p4 = pos[i+W];
+            Vector3f N1 = Vector3f::cross( p3 - p1, p2 - p1);
+            rec.record(p1, N1);
+            rec.record(p2, N1);
+            rec.record(p3, N1);
+
+            Vector3f N2 = Vector3f::cross(p3 - p2, p4 - p2);
+            rec.record(p2, N);
+            rec.record(p3, N);
+            rec.record(p4, N);
+
+            rec.draw();
+        }
+    }
+
+	/*
 	//draw structural Springs
 	for (unsigned int i=0; i<m_structuralSprings.size(); i++) {
 		Vector4f spring = m_structuralSprings[i];
@@ -404,7 +421,7 @@ void ClothSystem::draw(GLProgram& gl)
 		rec.record(particle_1_position, CLOTH_COLOR);
 		rec.record(particle_2_position, CLOTH_COLOR);
 	}
-
+	*/
 
     //rec.record(O, CLOTH_COLOR);
     //rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
@@ -416,8 +433,8 @@ void ClothSystem::draw(GLProgram& gl)
 
     //rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
     //rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
-    glLineWidth(3.0f);
-    rec.draw(GL_LINES);
+    //glLineWidth(3.0f);
+    //rec.draw(GL_LINES);
 
     gl.enableLighting(); // reset to default lighting model
     // EXAMPLE END
