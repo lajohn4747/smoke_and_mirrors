@@ -9,6 +9,7 @@
 
 #include <vector>
 #include "particlesystem.h"
+#include <string>
 
 class PrerenderSystem: public ParticleSystem{
 public:
@@ -17,9 +18,17 @@ public:
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
     void draw(GLProgram&);
 
-    int currentIteration = 0;
-    int lastIteration;
-    std::vector<Vector3f> allPositions;
+    int currentIterationSmoke = 0;
+    int currentIterationCloth = 0;
+    int currentIterationBall = 0;
+    int lastIterationSmoke;
+    int lastIterationCloth;
+    int lastIterationBall;
+    std::vector<Vector3f> allPositionsSmoke;
+    std::vector<Vector3f> allPositionsBall;
+    std::vector<Vector3f> allPositionsCloth;
     // inherits
     // std::vector<Vector3f> m_vVecState;
+private:
+    void removeCharsFromString(std::string &str, std::string charsToRemove);
 };

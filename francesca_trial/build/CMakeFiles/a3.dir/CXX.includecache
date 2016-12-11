@@ -203,11 +203,11 @@ camera.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/src/camera.h
 vertexrecorder.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
-string
--
 iostream
 -
 fstream
+-
+sstream
 -
 
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/src/prerender.h
@@ -215,6 +215,8 @@ vector
 -
 particlesystem.h
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/src/particlesystem.h
+string
+-
 
 /Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/src/simplesystem.cpp
 simplesystem.h

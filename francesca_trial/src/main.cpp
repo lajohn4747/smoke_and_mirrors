@@ -187,14 +187,14 @@ void initSystem()
     default: printf("Unrecognized integrator\n"); exit(-1);
     }
 
-    simpleSystem = new SimpleSystem();
+    //simpleSystem = new SimpleSystem();
     // TODO you can modify the number of particles
     pendulumSystem = new PendulumSystem();
     // TODO customize initialization of cloth system
     clothSystem = new ClothSystem();
     // TODO start prerender system
-    printf("%s\n", "Prerender system");
-    preSystem = new PrerenderSystem();
+    //printf("%s\n", "Prerender system");
+    //preSystem = new PrerenderSystem();
 }
 
 void freeSystem() {
@@ -217,10 +217,9 @@ void stepSystem()
 {
     // step until simulated_s has caught up with elapsed_s.
     while (simulated_s < elapsed_s) {
-        timeStepper->takeStep(simpleSystem, h);
+        //timeStepper->takeStep(simpleSystem, h);
         timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
-        timeStepper->takeStep(preSystem, 1);
         //timeStepper->takeStep(preSystem, h);
         simulated_s += h;
     }
@@ -235,9 +234,9 @@ void drawSystem()
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
     //simpleSystem->draw(gl);
-    //pendulumSystem->draw(gl);
-    //clothSystem->draw(gl);
-    preSystem->draw(gl);
+    pendulumSystem->draw(gl);
+    clothSystem->draw(gl);
+    //preSystem->draw(gl);
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);

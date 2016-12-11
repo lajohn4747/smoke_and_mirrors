@@ -344,9 +344,13 @@ void ClothSystem::draw(GLProgram& gl)
 			if (i==m_vVecState.size()-2) {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				drawSphere(0.25f, 20, 20);
+                printf("B ");
+                m_vVecState[i].print();
 			} else {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				pos.push_back(m_vVecState[i]);
+                printf("C ");
+                m_vVecState[i].print();
 				//drawSphere(0.04f, 8, 8);
 			}
 		}
