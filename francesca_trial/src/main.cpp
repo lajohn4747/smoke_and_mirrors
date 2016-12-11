@@ -193,6 +193,7 @@ void initSystem()
     // TODO customize initialization of cloth system
     clothSystem = new ClothSystem();
     // TODO start prerender system
+    printf("%s\n", "Prerender system");
     preSystem = new PrerenderSystem();
 }
 
@@ -219,6 +220,7 @@ void stepSystem()
         timeStepper->takeStep(simpleSystem, h);
         timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
+        timeStepper->takeStep(preSystem, 1);
         //timeStepper->takeStep(preSystem, h);
         simulated_s += h;
     }
@@ -233,8 +235,9 @@ void drawSystem()
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
     //simpleSystem->draw(gl);
-    pendulumSystem->draw(gl);
-    clothSystem->draw(gl);
+    //pendulumSystem->draw(gl);
+    //clothSystem->draw(gl);
+    preSystem->draw(gl);
 
     // set uniforms for floor
     gl.updateMaterial(FLOOR_COLOR);

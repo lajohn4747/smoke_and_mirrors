@@ -166,7 +166,7 @@ void PendulumSystem::draw(GLProgram& gl)
 
 	for (unsigned int i=0; i<m_vVecState.size()/2; i++) {
 		Vector3f position = m_vVecState[i*2];
-        position.print();
+        //position.print();
 		gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));
 		gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
 		drawSphere(0.05f, 8, 8);

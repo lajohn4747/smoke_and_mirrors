@@ -17,6 +17,9 @@ public:
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
     void draw(GLProgram&);
 
+    int currentIteration = 0;
+    int lastIteration;
+    std::vector<Vector3f> allPositions;
     // inherits
     // std::vector<Vector3f> m_vVecState;
 };
