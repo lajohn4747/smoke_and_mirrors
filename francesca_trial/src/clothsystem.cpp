@@ -199,7 +199,7 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 			//check if ball intersects with particle:
 			Vector3f particlePosition = state[i-1];
 			float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
-			if (distanceBetweenBallAndParticle <= (ballRadius+0.001)) {
+			if (distanceBetweenBallAndParticle <= (ballRadius+0.05)) {
 				//particle is inside ball
 				//Vector3f currentForce = f[i];
 				//Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f);
