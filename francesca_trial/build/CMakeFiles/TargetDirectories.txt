@@ -1,11 +1,3 @@
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/CMakeFiles/edit_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/CMakeFiles/rebuild_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/CMakeFiles/a3.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/CMakeFiles/edit_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/CMakeFiles/rebuild_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/src/CMakeFiles/edit_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/src/CMakeFiles/rebuild_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/src/CMakeFiles/glfw.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/vecmath/CMakeFiles/edit_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/vecmath/CMakeFiles/rebuild_cache.dir
-/Users/johnla/Documents/Senior_Fall/FinalProjects/smoke_and_mirrors/francesca_trial/build/vecmath/CMakeFiles/vecmath.dir
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/CMakeFiles/a3.dir
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/3rd_party/glfw/src/CMakeFiles/glfw.dir
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/vecmath/CMakeFiles/vecmath.dir

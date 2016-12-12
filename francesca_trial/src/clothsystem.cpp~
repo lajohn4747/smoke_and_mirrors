@@ -2,21 +2,23 @@
 #include "camera.h"
 #include "vertexrecorder.h"
 #include <iostream>
+#include <math.h> //acos
+#include <algorithm> //max and min
 
 using namespace std;
 
 
  // your system should at least contain 8x8 particles.
-const int W = 8;
-const int H = 8;
-const float MASS = 0.035;
+const int W = 20;
+const int H = 20;
+const float MASS = 0.0035;
 const float GRAVITY_CONST = 9.80665;
 const float K_DRAG = 0.15;
-const float STRUCTURAL_REST = 0.3;
+const float STRUCTURAL_REST = 0.1;
 const float STRUCTURAL_K = 20.0;
-const float SHEAR_REST = 0.424264;
+const float SHEAR_REST = 0.141421;
 const float SHEAR_K = 30.0;
-const float FLEXION_REST = 0.6;
+const float FLEXION_REST = 0.2;
 const float FLEXION_K = 30.0;
 
 ClothSystem::ClothSystem()
@@ -25,19 +27,19 @@ ClothSystem::ClothSystem()
 	// You can again use rand_uniform(lo, hi) to make things a bit more interesting
 
 	//state has structure: position1, velocity1, position2, velocity2, ...
-	float x_value = -1.05f;
-	float z_value = -1.05f;
+	float x_value = -1.0f;
+	float z_value = -1.0f;
 	for (unsigned int i=0; i<W; i++) {
-		float thisX = x_value+(i*0.3f);
+		float thisX = x_value+(i*0.1f);
 		for (unsigned int j=0; j<H; j++) {
-			float thisZ = z_value+(j*0.3f);
+			float thisZ = z_value+(j*0.1f);
 			m_vVecState.push_back(Vector3f (thisX,0.0f,thisZ)); //position
 			m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity
 		}
 	}
 
-	m_vVecState.push_back(Vector3f (0.0f,2.0f,0.0f)); //position of ball
-	m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity of ball
+	// m_vVecState.push_back(Vector3f (0.0f,2.0f,0.0f)); //position of ball
+	// m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity of ball
 
 	//springs
 	//syntax of a spring Vector4f: [index of particle 1 position, index of particle 2 position, rest lenght, stiffness]
@@ -104,9 +106,10 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 	//also add velocities here
 	for (unsigned int i=1; i<=state.size(); i++) {
 		//only want gravity forces for particles, not their velocities
-		if (i==state.size()) {
-			f.push_back(Vector3f(0.0f, -0.05*GRAVITY_CONST, 0.0f)); //ball forces
-		}else if (i % 2 == 1) {
+		// if (i==state.size()) {
+		// 	f.push_back(Vector3f(0.0f, -1*GRAVITY_CONST*0.1, 0.0f)); //ball forces
+		// }else 
+		if (i % 2 == 1) {
 			f.push_back(state[i]);
 		} else {
 			//don't bother multiplying by mass, since we divide this out anyway
@@ -115,7 +118,8 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 	}
 
 	//viscous drag: -k*velocity
-	for (unsigned int i=0; i<state.size()-2; i++) {
+	//for (unsigned int i=0; i<state.size()-2; i++) {
+	for (unsigned int i=0; i<state.size(); i++) {
 		//only need to add this to the gravity forces (odd indexes in f)
 		if (i % 2 == 1) {
 			Vector3f currentForce = f[i];
@@ -186,48 +190,134 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 		f[particle_2_position_index + 1] = forceOnParticle2 + (-1*springForce/MASS);
 	}
 
-	float ballRadius = 0.25f;
-	Vector3f ballPosition = state[state.size()-2];
-	float ballGravity = -0.05*GRAVITY_CONST*500; //last number is ball mass
-	//list of cloth particles touching the ball
-	std::vector<int> particlesTouchingBall;
-	//add force applied by ball to cloth
-	for (int i=0; i<state.size()-2; i++) {
-		//only need to add this to the gravity forces (odd indexes in f)
-		if (i % 2 == 1) {
-			//check if ball intersects with particle:
-			Vector3f particlePosition = state[i-1];
-			float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
-			if (distanceBetweenBallAndParticle <= (ballRadius+0.001)) {
-				//particle is inside ball
-				//Vector3f currentForce = f[i];
-				//Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f);
-				//f[i] = newForce;
-				particlesTouchingBall.push_back(i-1);
-				
-			}
+	// float ballRadius = 0.25f;
+	// Vector3f ballPosition = state[state.size()-2];
+	// float ballGravity = -0.05*GRAVITY_CONST*500; //last number is ball mass
+	// //list of cloth particles touching the ball
+	// std::vector<int> particlesTouchingBall;
+	// for (int i=0; i<state.size()-2; i++) {
+	// 	//only need to add this to the gravity forces (odd indexes in f)
+	// 	if (i % 2 == 1) {
+	// 		//check if ball intersects with particle:
+	// 		Vector3f particlePosition = state[i-1];
+	// 		float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
+	// 		if (distanceBetweenBallAndParticle <= (ballRadius+0.055)) {
+	// 			//particle is inside ball
+	// 			//Vector3f currentForce = f[i];
+	// 			//Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f);
+	// 			//f[i] = newForce;
+	// 			particlesTouchingBall.push_back(i-1);
+	// 		}
+	// 	}
+	// }
+
+
+	// Vector3f forceOnBallFromCloth(0.0f, 0.0f, 0.0f);
+	// //find force exerted by cloth on the ball
+	// for (unsigned int i=0; i<particlesTouchingBall.size(); i++) {
+	// 	int particle_index = particlesTouchingBall[i];
+	// 		// for each of the <=12 springs attached to a particle, find their force in the +y direction
+	// 		// and sum up these forces to get the total force acting back on the ball
+	// 		//start with just the structural springs:
+	// 		for (unsigned int i=0; i<m_structuralSprings.size(); i++) {
+	// 			Vector4f spring = m_structuralSprings[i];
+	// 			int particle_1_position_index = (int) spring[0];
+	// 			int particle_2_position_index = (int) spring[1];
+	// 			if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+	// 				Vector3f particle_1_position = state[particle_1_position_index];
+	// 				Vector3f particle_2_position = state[particle_2_position_index];
+	// 				Vector3f d = particle_1_position - particle_2_position; //distance between the 2 particles
+	// 				float k = spring[3]; //k spring constant
+	// 				float r = spring[2]; //resting length of spring
+	// 				Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+
+	// 				//get the angle between the line create by the 2 particles and the +y axis
+	// 				//math.stackexchange.com/questions/714378
+	// 				//float particle_1_y_position = particle_1_position.y();
+	// 				//float particle_2_y_position = particle_2_position.y();
+	// 				//float max_y_position = std::max(particle_1_y_position, particle_2_y_position);
+	// 				//float min_y_position = std::min(particle_1_y_position, particle_2_y_position);
+	// 				//float numerator = max_y_position - min_y_position;
+	// 				//float demoninator = sqrt(pow(particle_1_position.x()-particle_2_position.x(), 2) + pow(numerator, 2));
+	// 				//float innerAngle = acos(numerator/demoninator);
+
+	// 				//now calculate force in +y direction:
+	// 				//Vector3f y_force = springForce*cos(innerAngle);
+	// 				Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+	// 				//add spring force to force acting on ball
+	// 				if (particle_index == particle_1_position_index) {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+	// 				} else {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+	// 				}
+	// 			}
+	// 		}
+	// 		//shear springs
+	// 		for (unsigned int i=0; i<m_shearSprings.size(); i++) {
+	// 			Vector4f spring = m_shearSprings[i];
+	// 			int particle_1_position_index = (int) spring[0];
+	// 			int particle_2_position_index = (int) spring[1];
+	// 			if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+	// 				Vector3f particle_1_position = state[particle_1_position_index];
+	// 				Vector3f particle_2_position = state[particle_2_position_index];
+	// 				Vector3f d = particle_1_position - particle_2_position;
+	// 				float k = spring[3];
+	// 				float r = spring[2];
+	// 				Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+	// 				Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+	// 				//add spring force to force acting on ball
+	// 				if (particle_index == particle_1_position_index) {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+	// 				} else {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+	// 				}
+	// 			}
+	// 		}
+	// 		//flexion strings
+	// 		for (unsigned int i=0; i<m_flexionSprings.size(); i++) {
+	// 			Vector4f spring = m_flexionSprings[i];
+	// 			int particle_1_position_index = (int) spring[0];
+	// 			int particle_2_position_index = (int) spring[1];
+	// 			if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+	// 				Vector3f particle_1_position = state[particle_1_position_index];
+	// 				Vector3f particle_2_position = state[particle_2_position_index];
+	// 				Vector3f d = particle_1_position - particle_2_position;
+	// 				float k = spring[3];
+	// 				float r = spring[2];
+	// 				Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+	// 				Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+	// 				//add spring force to force acting on ball
+	// 				if (particle_index == particle_1_position_index) {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+	// 				} else {
+	// 					forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+	// 				}
+	// 			}
+	// 		}
+
+	// }
+
+	// //add force applied by ball to cloth
+	// for (int i=0; i<particlesTouchingBall.size(); i++) {
+	// 	int particleIndex = particlesTouchingBall[i];
+	// 	Vector3f currentForce = f[particleIndex+1];
+	// 	Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f);
+	// 	f[particleIndex+1] = newForce;
+	// }
+
+
+	//apply forces from cloth on ball
+	//f[state.size()-1] = f[state.size()-1] + forceOnBallFromCloth;
+
+
+	if (extraForces.size() == W*H) {
+		for (int i=0; i<extraForces.size(); i++) {
+			Vector3f particleForce = extraForces[i];
+			Vector3f currentForceOnParticle = f[(i*2)+1];
+			Vector3f newForce = currentForceOnParticle + particleForce;
+			f[(i*2)+1] = newForce;
 		}
 	}
-
-
-	Vector3f forceOnBallFromCloth(0.0f, 0.0f, 0.0f);
-	//find force of cloth on the ball
-	for (unsigned int i=0; i<particlesTouchingBall.size(); i++) {
-		int particle_index = particlesTouchingBall[i];
-		
-	}
-
-	//add force applied by ball to cloth
-	for (int i=0; i<particlesTouchingBall.size(); i++) {
-		int particleIndex = particlesTouchingBall[i];
-		Vector3f currentForce = f[particleIndex+1];
-		Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f);
-		f[particleIndex+1] = newForce;
-
-	}
-
-
-
 	
 	//finally, make sure we have one fixed point (forces = 0)
 	f[indexOf(0,0) + 1] = Vector3f(0.0f,0.0f,0.0f);
@@ -239,6 +329,137 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 }
 
 
+std::vector<int> ClothSystem::pointsCollidingWithBall(RigidBall* ball) {
+	float ballRadius = ball->getRadius();
+	Vector3f ballPosition = ball->getCenter();
+	//list of cloth particles touching the ball
+	std::vector<int> particlesTouchingBall;
+	for (int i=0; i<m_vVecState.size(); i++) {
+		//only need to add this for positions
+		if (i % 2 == 0) {
+			//check if ball intersects with particle:
+			Vector3f particlePosition = m_vVecState[i];
+			float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
+			if (distanceBetweenBallAndParticle <= (ballRadius+0.055)) {
+				particlesTouchingBall.push_back(i);
+			}
+		}
+	}
+	return particlesTouchingBall;
+}
+
+
+Vector3f ClothSystem::getForceOnBall(std::vector<int> particlesTouchingBall) {
+	Vector3f forceOnBallFromCloth(0.0f, 0.0f, 0.0f);
+	//find force exerted by cloth on the ball
+	for (int i=0; i<particlesTouchingBall.size(); i++) {
+		int particle_index = particlesTouchingBall[i];
+			// for each of the <=12 springs attached to a particle, find their force in the +y direction
+			// and sum up these forces to get the total force acting back on the ball
+			//start with just the structural springs:
+			for (unsigned int i=0; i<m_structuralSprings.size(); i++) {
+				Vector4f spring = m_structuralSprings[i];
+				int particle_1_position_index = (int) spring[0];
+				int particle_2_position_index = (int) spring[1];
+				if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+					Vector3f particle_1_position = m_vVecState[particle_1_position_index];
+					Vector3f particle_2_position = m_vVecState[particle_2_position_index];
+					Vector3f d = particle_1_position - particle_2_position; //distance between the 2 particles
+					float k = spring[3]; //k spring constant
+					float r = spring[2]; //resting length of spring
+					Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+
+					//get the angle between the line create by the 2 particles and the +y axis
+					//math.stackexchange.com/questions/714378
+					//float particle_1_y_position = particle_1_position.y();
+					//float particle_2_y_position = particle_2_position.y();
+					//float max_y_position = std::max(particle_1_y_position, particle_2_y_position);
+					//float min_y_position = std::min(particle_1_y_position, particle_2_y_position);
+					//float numerator = max_y_position - min_y_position;
+					//float demoninator = sqrt(pow(particle_1_position.x()-particle_2_position.x(), 2) + pow(numerator, 2));
+					//float innerAngle = acos(numerator/demoninator);
+
+					//now calculate force in +y direction:
+					//Vector3f y_force = springForce*cos(innerAngle);
+					Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+					//add spring force to force acting on ball
+					if (particle_index == particle_1_position_index) {
+						forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+					} else {
+						forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+					}
+				}
+			}
+			//shear springs
+			for (unsigned int i=0; i<m_shearSprings.size(); i++) {
+				Vector4f spring = m_shearSprings[i];
+				int particle_1_position_index = (int) spring[0];
+				int particle_2_position_index = (int) spring[1];
+				if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+					Vector3f particle_1_position = m_vVecState[particle_1_position_index];
+					Vector3f particle_2_position = m_vVecState[particle_2_position_index];
+					Vector3f d = particle_1_position - particle_2_position;
+					float k = spring[3];
+					float r = spring[2];
+					Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+					Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+					//add spring force to force acting on ball
+					if (particle_index == particle_1_position_index) {
+						forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+					} else {
+						forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+					}
+				}
+			}
+			//flexion strings
+			for (unsigned int i=0; i<m_flexionSprings.size(); i++) {
+				Vector4f spring = m_flexionSprings[i];
+				int particle_1_position_index = (int) spring[0];
+				int particle_2_position_index = (int) spring[1];
+				if (particle_index == particle_1_position_index || particle_index == particle_2_position_index) {
+					Vector3f particle_1_position = m_vVecState[particle_1_position_index];
+					Vector3f particle_2_position = m_vVecState[particle_2_position_index];
+					Vector3f d = particle_1_position - particle_2_position;
+					float k = spring[3];
+					float r = spring[2];
+					Vector3f springForce = -1*k*(d.abs() - r)*(d/d.abs());
+					Vector3f y_force = Vector3f(0.0f, springForce.y(), 0.0f);
+					//add spring force to force acting on ball
+					if (particle_index == particle_1_position_index) {
+						forceOnBallFromCloth = (forceOnBallFromCloth + y_force);
+					} else {
+						forceOnBallFromCloth = (forceOnBallFromCloth - y_force);
+					}
+				}
+			}
+	}
+	printf("P on B ");
+	forceOnBallFromCloth.print();
+	return forceOnBallFromCloth;
+}
+  
+
+std::vector<Vector3f> ClothSystem::getForcesOnPartices(std::vector<int> particlesTouchingBall, RigidBall* ball) {
+	//add force applied by ball to cloth
+	std::vector<Vector3f> f;
+	Vector3f ballGravity = ball->getDownwardForce();
+	for (unsigned int i=0; i<W; i++) {
+		for (unsigned int j=0; j<H; j++) {
+			bool pushed = false;
+			for (int index=0; index<particlesTouchingBall.size(); index++) {
+				if (index == (indexOf(i, j))) {
+					f.push_back(ballGravity);
+					pushed = true;
+				}
+			}
+			if (!(pushed)) {
+				f.push_back(Vector3f(0.0f, 0.0f, 0.0f));
+			}
+		}
+	}
+	return f;
+}
+
 void ClothSystem::draw(GLProgram& gl)
 {
     //TODO 5: render the system 
@@ -248,91 +469,53 @@ void ClothSystem::draw(GLProgram& gl)
 
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
     gl.updateMaterial(CLOTH_COLOR);
+	vector<Vector3f> pos;
 
-    // EXAMPLE for how to render cloth particles.
-    //  - you should replace this code.
-    //float w = 0.2f;
-    //Vector3f O(0.4f, 1, 0);
 
     for (unsigned int i=0; i<m_vVecState.size(); i++) {
-	if (i%2 == 0) {
-		if (i==m_vVecState.size()-2) {
-			gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-    			drawSphere(0.25f, 20, 20);
-		}else {
-			gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-    			drawSphere(0.04f, 8, 8);
+		if (i%2 == 0) {
+			//if (i==m_vVecState.size()-2) {
+			if (i==m_vVecState.size()) {
+				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				drawSphere(0.25f, 20, 20);
+               			//printf("B ");
+                		//m_vVecState[i].print();
+			} else {
+				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				pos.push_back(m_vVecState[i]);
+				//printf("C ");
+				//m_vVecState[i].print();
+						//drawSphere(0.04f, 8, 8);
+			}
 		}
-	}
     }
-    //gl.updateModelMatrix(Matrix4f::translation(O));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, 0, 0)));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(w, -w, 0)));
-    //drawSphere(0.04f, 8, 8);
-    //gl.updateModelMatrix(Matrix4f::translation(O + Vector3f(0, -w, 0)));
-    //drawSphere(0.04f, 8, 8);
 
-    // EXAMPLE: This shows you how to render lines to debug the spring system.
-    //
-    //          You should replace this code.
-    //
-    //          Since lines don't have a clearly defined normal, we can't use
-    //          a regular lighting model.
-    //          GLprogram has a "color only" mode, where illumination
-    //          is disabled, and you specify color directly as vertex attribute.
-    //          Note: enableLighting/disableLighting invalidates uniforms,
-    //          so you'll have to update the transformation/material parameters
-    //          after a mode change.
+
     gl.disableLighting();
     gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
     VertexRecorder rec;
-	
-	//draw structural Springs
-	for (unsigned int i=0; i<m_structuralSprings.size(); i++) {
-		Vector4f spring = m_structuralSprings[i];
-		int particle_1_position_index = (int) spring[0];
-		int particle_2_position_index = (int) spring[1];
-		Vector3f particle_1_position = m_vVecState[particle_1_position_index];
-		Vector3f particle_2_position = m_vVecState[particle_2_position_index];
-		rec.record(particle_1_position, CLOTH_COLOR);
-		rec.record(particle_2_position, CLOTH_COLOR);
-	}
-	//draw shear Springs
-	for (unsigned int i=0; i<m_shearSprings.size(); i++) {
-		Vector4f spring = m_shearSprings[i];
-		int particle_1_position_index = (int) spring[0];
-		int particle_2_position_index = (int) spring[1];
-		Vector3f particle_1_position = m_vVecState[particle_1_position_index];
-		Vector3f particle_2_position = m_vVecState[particle_2_position_index];
-		rec.record(particle_1_position, CLOTH_COLOR);
-		rec.record(particle_2_position, CLOTH_COLOR);
-	}
-	//draw flexion Springs
-	for (unsigned int i=0; i<m_flexionSprings.size(); i++) {
-		Vector4f spring = m_flexionSprings[i];
-		int particle_1_position_index = (int) spring[0];
-		int particle_2_position_index = (int) spring[1];
-		Vector3f particle_1_position = m_vVecState[particle_1_position_index];
-		Vector3f particle_2_position = m_vVecState[particle_2_position_index];
-		rec.record(particle_1_position, CLOTH_COLOR);
-		rec.record(particle_2_position, CLOTH_COLOR);
-	}
 
+    const Vector3f N(0, 1, 0);
 
-    //rec.record(O, CLOTH_COLOR);
-    //rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
-    //rec.record(O, CLOTH_COLOR);
-    //rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
+    for(unsigned i = 1; i < pos.size() - W; ++i){
+        if(i % W != 0){
+            Vector3f p1 = pos[i-1];
+            Vector3f p2 = pos[i];
+            Vector3f p3 = pos[i+W-1];
+            Vector3f p4 = pos[i+W];
+            Vector3f N1 = Vector3f::cross( p3 - p1, p2 - p1);
+            rec.record(p1, N1);
+            rec.record(p2, N1);
+            rec.record(p3, N1);
 
-    //rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
-    //rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
+            Vector3f N2 = Vector3f::cross(p3 - p2, p4 - p2);
+            rec.record(p2, N);
+            rec.record(p3, N);
+            rec.record(p4, N);
 
-    //rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
-    //rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
-    glLineWidth(3.0f);
-    rec.draw(GL_LINES);
+            rec.draw();
+        }
+    }
 
     gl.enableLighting(); // reset to default lighting model
     // EXAMPLE END

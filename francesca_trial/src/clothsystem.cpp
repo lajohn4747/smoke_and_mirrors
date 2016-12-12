@@ -312,7 +312,7 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 
 	if (extraForces.size() == W*H) {
 		for (int i=0; i<extraForces.size(); i++) {
-			int particleForce = extraForces[i];
+			Vector3f particleForce = extraForces[i];
 			Vector3f currentForceOnParticle = f[(i*2)+1];
 			Vector3f newForce = currentForceOnParticle + particleForce;
 			f[(i*2)+1] = newForce;
@@ -329,16 +329,16 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 }
 
 
-std::vector<int> ClothSystem::pointsCollidingWithBall(rigidBall ball) {
-	float ballRadius = ball.getRadius();
-	Vector3f ballPosition = ball.getCenter();
+std::vector<int> ClothSystem::pointsCollidingWithBall(RigidBall* ball) {
+	float ballRadius = ball->getRadius();
+	Vector3f ballPosition = ball->getCenter();
 	//list of cloth particles touching the ball
 	std::vector<int> particlesTouchingBall;
 	for (int i=0; i<m_vVecState.size(); i++) {
 		//only need to add this for positions
 		if (i % 2 == 0) {
 			//check if ball intersects with particle:
-			Vector3f particlePosition = state[i];
+			Vector3f particlePosition = m_vVecState[i];
 			float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
 			if (distanceBetweenBallAndParticle <= (ballRadius+0.055)) {
 				particlesTouchingBall.push_back(i);
@@ -349,7 +349,7 @@ std::vector<int> ClothSystem::pointsCollidingWithBall(rigidBall ball) {
 }
 
 
-Vector3f ClothSystem::getForceOnBall(std::vector<int> particlesTouchingBall, rigidBall ball) {
+Vector3f ClothSystem::getForceOnBall(std::vector<int> particlesTouchingBall) {
 	Vector3f forceOnBallFromCloth(0.0f, 0.0f, 0.0f);
 	//find force exerted by cloth on the ball
 	for (int i=0; i<particlesTouchingBall.size(); i++) {
@@ -433,28 +433,31 @@ Vector3f ClothSystem::getForceOnBall(std::vector<int> particlesTouchingBall, rig
 				}
 			}
 	}
+	//printf("P on B ");
+	//forceOnBallFromCloth.print();
 	return forceOnBallFromCloth;
 }
   
 
-std::vector<Vector3f> ClothSystem::getForcesOnPartices(std::vector<int> particlesTouchingBall, rigidBall ball) {
+std::vector<Vector3f> ClothSystem::getForcesOnPartices(std::vector<int> particlesTouchingBall, RigidBall* ball) {
 	//add force applied by ball to cloth
 	std::vector<Vector3f> f;
-	float ballGravity = ball.getDownwardForce();
+	Vector3f ballGravity = ball->getDownwardForce();
 	for (unsigned int i=0; i<W; i++) {
 		for (unsigned int j=0; j<H; j++) {
 			bool pushed = false;
 			for (int index=0; index<particlesTouchingBall.size(); index++) {
-				if (index == (indexOf(i, j)) {
-					f.push_back(0.0f, ballGravity, 0.0f);
+				if (index == (indexOf(i, j))) {
+					f.push_back(ballGravity);
 					pushed = true;
 				}
 			}
 			if (!(pushed)) {
-				f.push_back(0.0f, 0.0f, 0.0f);
+				f.push_back(Vector3f(0.0f, 0.0f, 0.0f));
 			}
 		}
 	}
+	return f;
 }
 
 void ClothSystem::draw(GLProgram& gl)
@@ -471,17 +474,18 @@ void ClothSystem::draw(GLProgram& gl)
 
     for (unsigned int i=0; i<m_vVecState.size(); i++) {
 		if (i%2 == 0) {
-			if (i==m_vVecState.size()-2) {
+			//if (i==m_vVecState.size()-2) {
+			if (i==m_vVecState.size()) {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				drawSphere(0.25f, 20, 20);
-                printf("B ");
-                m_vVecState[i].print();
+               			//printf("B ");
+                		//m_vVecState[i].print();
 			} else {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				pos.push_back(m_vVecState[i]);
-                printf("C ");
-                m_vVecState[i].print();
-				//drawSphere(0.04f, 8, 8);
+				//printf("C ");
+				//m_vVecState[i].print();
+						//drawSphere(0.04f, 8, 8);
 			}
 		}
     }

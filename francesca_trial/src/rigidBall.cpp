@@ -6,7 +6,7 @@
 #include "camera.h"
 #include "vertexrecorder.h"
 
-const float MASS = 0.0035;
+const float MASS = 0.01;
 const float GRAVITY_CONST = 9.80665;
 const float K_DRAG = 0.15;
 const float RADIUS = 0.25f;
@@ -46,7 +46,7 @@ Vector3f RigidBall::getCenter() {
 void RigidBall::draw(GLProgram &gl) {
     const Vector3f PARTICLE_COLOR(0.4f, 0.7f, 1.0f);
     gl.updateMaterial(PARTICLE_COLOR);
-    Vector3f pos = getState()[1];
+    Vector3f pos = getState()[0];
     center = pos;
     gl.updateModelMatrix(Matrix4f::translation(pos));
     drawSphere(RADIUS, 30, 10);
