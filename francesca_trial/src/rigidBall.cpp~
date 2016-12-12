@@ -6,15 +6,14 @@
 #include "camera.h"
 #include "vertexrecorder.h"
 
-const float MASS = 0.0035;
+const float MASS = 0.01;
 const float GRAVITY_CONST = 9.80665;
 const float K_DRAG = 0.15;
 const float RADIUS = 0.25f;
 
 // Initialize the ball with a start state
 RigidBall::RigidBall() {
-    center = Vector3f(0.0f, 4.0f, 0.0);
-    m_vVecState.push_back(Vector3f(0.0f, 4.0f, 0.0f)); //position
+    m_vVecState.push_back(Vector3f(0.0f, 2.0f, 0.0f)); //position
     m_vVecState.push_back(Vector3f(0.0f, 0.0f, 0.0)); //velocity
 
 }
@@ -40,14 +39,12 @@ float RigidBall::getRadius() {
 }
 
 Vector3f RigidBall::getCenter() {
-    return center;
+    return m_vVecState[0];
 }
 
 void RigidBall::draw(GLProgram &gl) {
     const Vector3f PARTICLE_COLOR(0.4f, 0.7f, 1.0f);
     gl.updateMaterial(PARTICLE_COLOR);
-    Vector3f pos = getState()[0];
-    center = pos;
-    gl.updateModelMatrix(Matrix4f::translation(pos));
+    gl.updateModelMatrix(Matrix4f::translation(m_vVecState[0]));
     drawSphere(RADIUS, 30, 10);
 }

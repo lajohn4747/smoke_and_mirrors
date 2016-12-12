@@ -68,28 +68,6 @@ vecmath.h
 cstdint
 -
 
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/clothsystem.cpp
-clothsystem.h
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/clothsystem.h
-camera.h
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/camera.h
-vertexrecorder.h
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
-iostream
--
-math.h
--
-algorithm
--
-
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/clothsystem.h
-vector
--
-particlesystem.h
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/particlesystem.h
-rigidBall.h
-/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
-
 /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/gl.h
 OpenGL/gl3.h
 -
@@ -103,6 +81,14 @@ vecmath.h
 -
 cstdint
 -
+
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.cpp
+rigidBall.h
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
+camera.h
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/camera.h
+vertexrecorder.h
+/afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
 
 /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
 particlesystem.h

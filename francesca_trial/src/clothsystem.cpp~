@@ -433,8 +433,8 @@ Vector3f ClothSystem::getForceOnBall(std::vector<int> particlesTouchingBall) {
 				}
 			}
 	}
-	printf("P on B ");
-	forceOnBallFromCloth.print();
+	//printf("P on B ");
+	//forceOnBallFromCloth.print();
 	return forceOnBallFromCloth;
 }
   

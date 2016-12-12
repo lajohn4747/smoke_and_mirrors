@@ -24,6 +24,9 @@ public:
     Vector3f extraForces = Vector3f(0.0f, 0.0f, 0.0f);
 
     Vector3f getCenter();
+    Vector3f center;
+
+    float radius;
     float getRadius();
 
 private:

@@ -227,7 +227,8 @@ void stepSystem()
         timeStepper->takeStep(rigidBall, h);
         //timeStepper->takeStep(preSystem, h);
         std::vector<int> pointsCollidingWithBall = clothSystem->pointsCollidingWithBall(rigidBall);
-        if (pointsCollidingWithBall.size() < 1) {
+        if (pointsCollidingWithBall.size() >= 1) {
+		printf("Colliding");
             rigidBall->extraForces = clothSystem->getForceOnBall(pointsCollidingWithBall);
             clothSystem->extraForces = clothSystem->getForcesOnPartices(pointsCollidingWithBall, rigidBall);
         } else {
