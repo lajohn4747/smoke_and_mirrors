@@ -27,7 +27,7 @@ ClothSystem::ClothSystem()
 	// You can again use rand_uniform(lo, hi) to make things a bit more interesting
 
 	//state has structure: position1, velocity1, position2, velocity2, ...
-	float x_value = -1.0f;
+	float x_value = -3.0f;
 	float z_value = -1.0f;
 	for (unsigned int i=0; i<W; i++) {
 		float thisX = x_value+(i*0.1f);
@@ -38,7 +38,7 @@ ClothSystem::ClothSystem()
 		}
 	}
 
-	 m_vVecState.push_back(Vector3f (0.0f,2.0f,0.0f)); //position of ball
+	 m_vVecState.push_back(Vector3f (-2.0f,2.0f,0.0f)); //position of ball
 	 m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity of ball
 
 	//springs
@@ -478,20 +478,20 @@ void ClothSystem::draw(GLProgram& gl)
 			//if (i==m_vVecState.size()) {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				drawSphere(0.25f, 20, 20);
-               			//printf("B ");
-                		//m_vVecState[i].print();
+               			printf("B ");
+                		m_vVecState[i].print();
 			} else {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				pos.push_back(m_vVecState[i]);
-				//printf("C ");
-				//m_vVecState[i].print();
+				printf("C ");
+				m_vVecState[i].print();
 						//drawSphere(0.04f, 8, 8);
 			}
 		}
     }
 
 
-    gl.disableLighting();
+   //gl.disableLighting();
     gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
     VertexRecorder rec;
 

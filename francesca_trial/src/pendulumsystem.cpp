@@ -6,8 +6,8 @@
 #include "vertexrecorder.h"
 
 // TODO adjust to number of particles.
-const int NUM_PARTICLES = 30;
-const float GRAVITY_CONST = -9.80665;
+const int NUM_PARTICLES = 1000;
+const float GRAVITY_CONST = 9.80665;
 
 const float MASS = 0.1f; //mass of a single smoke particle
 const float H_RADIUS = 0.01f; //radius of volume where we care about surrounding particles for fluid flow
@@ -25,12 +25,14 @@ const float PI = 3.14159265358979323846f;
 PendulumSystem::PendulumSystem() {
 	for (int i = 1; i < NUM_PARTICLES; i++) {
 		// for this system, we care about the position and the velocity
-		float f1 = rand_uniform(-0.3f, 0.3f);
-		float f2 = rand_uniform(-0.3f, 0.3f);
-		float f3 = rand_uniform(-0.3f, 0.3f);
+		float f1 = rand_uniform(0.5f, 1.5f);
+		float f2 = rand_uniform(-0.5f, 0.5f);
+		float f3 = rand_uniform(-0.5f, 0.5f);
 		this->m_vVecState.push_back(Vector3f(f1,f2,f3)); //position
 		this->m_vVecState.push_back(Vector3f(0,0,0)); //velocity
 	    }
+	m_vVecState.push_back(Vector3f (1.0f,2.0f,0.0f)); //position of ball
+	m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity of ball
 }
 
 
@@ -47,11 +49,6 @@ Vector3f PendulumSystem::calcGradientW(Vector3f r) {
 	float middleTerm = -3*pow(H_RADIUS-r.abs(), 2);
 	return Vector3f(coefficient*middleTerm*r.x(), coefficient*middleTerm*r.y(), coefficient*middleTerm*r.z());
 
-	//old poly6 kernel code
-	/*float coefficient = 945.0f/(32*PI*pow(H_RADIUS, 9)); //WRONG - need to multiply by r
-	float middleTerm = pow((pow(H_RADIUS,2) - pow(r.abs(), 2)), 2);
-	return Vector3f(coefficient*middleTerm*2*r.x(), coefficient*middleTerm*2*r.y(), coefficient*middleTerm*2*r.z());
-	*/
 }
 
 float PendulumSystem::calcLaplacianW(Vector3f r) {
@@ -64,7 +61,7 @@ float PendulumSystem::calcLaplacianW(Vector3f r) {
 float PendulumSystem::calculateDensity(std::vector<Vector3f> state, int x_i_index) {
 	float rho_i = 0.0f;
 	Vector3f x_i = state[x_i_index];
-	for (int j=0; j<state.size(); j++) {
+	for (int j=0; j<state.size()-2; j++) {
 		//only need to look at particle positions (even indexes in state vector)
 		if (j % 2 == 0 && j!=x_i_index) {
 			Vector3f x_j = state[j]; //position of the other particle
@@ -83,7 +80,7 @@ float PendulumSystem::calculateDensity(std::vector<Vector3f> state, int x_i_inde
 Vector3f PendulumSystem::calculatePressureForce(std::vector<Vector3f> state, int x_i_index) {
 	Vector3f force(0.0f, 0.0f, 0.0f);
 	Vector3f x_i = state[x_i_index];
-	for (int j=0; j<state.size(); j++) {
+	for (int j=0; j<state.size()-2; j++) {
 		//only need to look at particle positions (even indexes in state vector)
 		if (j % 2 == 0 && j!=x_i_index) {
 			Vector3f x_j = state[j]; //position of the other particle
@@ -105,7 +102,7 @@ Vector3f PendulumSystem::calculatePressureForce(std::vector<Vector3f> state, int
 Vector3f PendulumSystem::calculateViscosityForce(std::vector<Vector3f> state, int x_i_index) {
 	Vector3f force(0.0f, 0.0f, 0.0f);
 	Vector3f x_i = state[x_i_index];
-	for (int j=0; j<state.size(); j++) {
+	for (int j=0; j<state.size()-2; j++) {
 		//only need to look at particle positions (even indexes in state vector)
 		if (j % 2 == 0 && j!=x_i_index) {
 			Vector3f x_j = state[j]; //position of the other particle
@@ -127,9 +124,9 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
 {
 	//return state list with velocity1, acceleration1, v2, a2, ...
 	std::vector<Vector3f> f; //in the form: velocity, acceleration (force/m)
-
+	float ballGravity = -1*GRAVITY_CONST*0.1;
 	//initialize f
-	for (unsigned int i=1; i<=state.size(); i++) {
+	for (unsigned int i=1; i<=state.size()-2; i++) {
 		//only want gravity forces for particles, not their velocities
 		if (i % 2 == 1) {
 			f.push_back(state[i]); //add velocities to f
@@ -138,11 +135,13 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
 			f.push_back(Vector3f(0.0f, 0.0f, 0.0f)); //add empty vector for forces to f
 		}
 	}
+	f.push_back(state[state.size()-1]); //velocity of ball
+	f.push_back(Vector3f(0.0f, ballGravity, 0.0f)); //acceleration of ball
 
 	Vector3f f_buoyancy = Vector3f(0.0f, (-1*ALPHA*S) + (BETA*(TEMP - TEMP_ENV)), 0.0f);
 
 	//calculate fluid forces: particle density, particle pressure, force of pressure, force of viscosity
-	for (int i=0; i<state.size(); i++) {
+	for (int i=0; i<state.size()-2; i++) {
 		//only need to add this to the forces (odd indexes in f)
 		if (i % 2 == 1) {
 			//get variables
@@ -153,7 +152,24 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
 		}
 	}
 
-	//TODO calculate external forces (gravity of the rigid ball)
+
+	 float ballRadius = 0.25f;
+	 Vector3f ballPosition = state[state.size()-2];
+	 //list of smoke particles touching the ball
+	 for (int i=0; i<state.size()-2; i++) {
+	 	//only need to add this to the forces (odd indexes in f)
+	 	if (i % 2 == 1) {
+	 		//check if ball intersects with particle:
+	 		Vector3f particlePosition = state[i-1];
+	 		float distanceBetweenBallAndParticle = (ballPosition-particlePosition).abs();
+	 		if (distanceBetweenBallAndParticle <= (ballRadius+0.01)) {
+	 			//particle is inside ball
+	 			Vector3f currentForce = f[i];
+	 			Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f)/MASS;
+	 			f[i] = newForce;
+	 		}
+	 	}
+	 }
 
 	return f;
 }
@@ -166,11 +182,17 @@ void PendulumSystem::draw(GLProgram& gl)
 
 	for (unsigned int i=0; i<m_vVecState.size()/2; i++) {
 		Vector3f position = m_vVecState[i*2];
-        //printf("S ");
-        //position.print();
-		gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));
-		gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
-		drawSphere(0.05f, 8, 8);
+		if (i==((m_vVecState.size()/2)-1)) {
+			gl.updateModelMatrix(Matrix4f::translation(position));
+			drawSphere(0.25f, 20, 20);
+		} else {
+			gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));
+			printf("S ");
+			posiion.print();
+			gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
+			drawSphere(0.02f, 8, 8);
+			//drawQuad(0.05f);
+		}
 	}
     //printf("%s\n", "One Iteration");
 }

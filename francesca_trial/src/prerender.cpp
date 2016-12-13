@@ -25,7 +25,7 @@ PrerenderSystem::PrerenderSystem() {
             string currentLine = line;
             string typeParticle;
             removeCharsFromString(currentLine, "<>");
-            //currentLine.erase( std::remove( currentLine.begin(), currentLine.end(), ',' ), currentLine.end() ) ;
+            currentLine.erase( std::remove( currentLine.begin(), currentLine.end(), ',' ), currentLine.end() ) ;
             //printf("%s This is \n", currentLine.c_str());
             std::istringstream iss(currentLine);
 
@@ -52,7 +52,7 @@ PrerenderSystem::PrerenderSystem() {
 
 void PrerenderSystem::removeCharsFromString( string &str, string charsToRemove ) {
     for ( unsigned int i = 0; i < charsToRemove.size(); ++i ) {
-        //str.erase( remove(str.begin(), str.end(), charsToRemove[i]), str.end() );
+        str.erase( remove(str.begin(), str.end(), charsToRemove[i]), str.end() );
     }
 }
 
