@@ -467,8 +467,8 @@ void ClothSystem::draw(GLProgram& gl)
     //         - or draw the springs as little lines or cylinders
     //         - or draw wireframe mesh
 
-    const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
-    gl.updateMaterial(CLOTH_COLOR);
+    //const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
+   // gl.updateMaterial(CLOTH_COLOR);
 	vector<Vector3f> pos;
 
 
@@ -476,24 +476,24 @@ void ClothSystem::draw(GLProgram& gl)
 		if (i%2 == 0) {
 			if (i==m_vVecState.size()-2) {
 			//if (i==m_vVecState.size()) {
-				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-				drawSphere(0.25f, 20, 20);
-               			//printf("B ");
-                		//m_vVecState[i].print();
+				//gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				//drawSphere(0.25f, 20, 20);
+               			printf("B ");
+                		m_vVecState[i].print();
 			} else {
-				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
-				pos.push_back(m_vVecState[i]);
-				//printf("C ");
-				//m_vVecState[i].print();
+				//gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				//pos.push_back(m_vVecState[i]);
+				printf("C ");
+				m_vVecState[i].print();
 						//drawSphere(0.04f, 8, 8);
 			}
 		}
     }
 
 
-    gl.disableLighting();
-    gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
-    VertexRecorder rec;
+   //gl.disableLighting();
+    //gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
+   /* VertexRecorder rec;
 
     const Vector3f N(0, 1, 0);
 
@@ -515,9 +515,9 @@ void ClothSystem::draw(GLProgram& gl)
 
             rec.draw();
         }
-    }
+    }*/
 
-    gl.enableLighting(); // reset to default lighting model
+    //gl.enableLighting(); // reset to default lighting model
     // EXAMPLE END
 }
 

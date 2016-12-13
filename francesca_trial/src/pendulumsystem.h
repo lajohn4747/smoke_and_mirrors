@@ -18,9 +18,13 @@ public:
     float calculateDensity(std::vector<Vector3f> state, int x_i_index);
     Vector3f calculatePressureForce(std::vector<Vector3f> state, int x_i_index);
     Vector3f calculateViscosityForce(std::vector<Vector3f> state, int x_i_index);
+    Vector3f calculateCombinedForces(std::vector<Vector3f> state, int x_i_index);
 
     std::vector<Vector3f> evalF(std::vector<Vector3f> state) override;
     void draw(GLProgram&);
+
+    std::vector<float> currentRhos;
+    std::vector<float> currentPs;
 
     // inherits 
     // std::vector<Vector3f> m_vVecState;
