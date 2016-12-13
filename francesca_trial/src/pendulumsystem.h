@@ -25,6 +25,7 @@ public:
 
     std::vector<float> currentRhos;
     std::vector<float> currentPs;
+std::vector<Vector3f> m_offsetVectors;
 
     // inherits 
     // std::vector<Vector3f> m_vVecState;

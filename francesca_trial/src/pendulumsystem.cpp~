@@ -6,7 +6,7 @@
 #include "vertexrecorder.h"
 
 // TODO adjust to number of particles.
-const int NUM_PARTICLES = 50;
+const int NUM_PARTICLES = 60;
 const float GRAVITY_CONST = 9.80665;
 
 const float MASS = 0.1f; //mass of a single smoke particle
@@ -33,6 +33,17 @@ PendulumSystem::PendulumSystem() {
 	    }
 	m_vVecState.push_back(Vector3f (1.0f,2.0f,0.0f)); //position of ball
 	m_vVecState.push_back(Vector3f (0.0f,0.0f,0.0f)); //velocity of ball
+
+	m_offsetVectors;
+	int counter = 0;
+	while (counter < 50*NUM_PARTICLES) {
+		float fo1 = rand_uniform(-0.2f, 0.2f);
+		float fo2 = rand_uniform(-0.2f, 0.2f);
+		float fo3 = rand_uniform(-0.2f, 0.2f);
+		m_offsetVectors.push_back(Vector3f(fo1,fo2,fo3));
+		counter += 1;
+	}
+
 }
 
 
@@ -172,8 +183,10 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
 	currentRhos = nextRhos;
 	currentPs = nextPs;
 
-	f.push_back(state[state.size()-1]); //velocity of ball
-	f.push_back(Vector3f(0.0f, ballGravity, 0.0f)); //acceleration of ball
+	Vector3f ballVelocity = state[state.size()-1];
+	f.push_back(ballVelocity); //velocity of ball
+	Vector3f ballForce = Vector3f(0.0f, ballGravity, 0.0f) + -0.11*ballVelocity;
+	f.push_back(ballForce); //acceleration of ball
 
 	Vector3f f_buoyancy = Vector3f(0.0f, (-1*ALPHA*S) + (BETA*(TEMP - TEMP_ENV)), 0.0f);
 
@@ -204,7 +217,7 @@ std::vector<Vector3f> PendulumSystem::evalF(std::vector<Vector3f> state)
 	 		if (distanceBetweenBallAndParticle <= (ballRadius+0.01)) {
 	 			//particle is inside ball
 	 			Vector3f currentForce = f[i];
-	 			Vector3f newForce = currentForce + Vector3f(0.0f, ballGravity, 0.0f)/MASS;
+	 			Vector3f newForce = currentForce + ballForce/MASS;
 	 			f[i] = newForce;
 	 		}
 	 	}
@@ -224,6 +237,8 @@ void PendulumSystem::draw(GLProgram& gl)
 		if (i==((m_vVecState.size()/2)-1)) {
 			gl.updateModelMatrix(Matrix4f::translation(position));
 			gl.updateMaterial(PENDULUM_COLOR);
+			printf("B2 ");
+			position.print();
 			drawSphere(0.25f, 20, 20);
 		} else {
 			gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));
@@ -233,13 +248,17 @@ void PendulumSystem::draw(GLProgram& gl)
 			drawSphere(0.05f, 8, 8);
 			//drawQuad(0.025);
 			int counter = 0;
-			while (counter < 35) {
+			while (counter < 50) {
+				Vector3f offsetVector = m_offsetVectors[(i*NUM_PARTICLES)+counter];
+				//float f1 = rand_uniform(-0.2f, 0.2f);
+				//float f2 = rand_uniform(-0.2f, 0.2f);
+				//float f3 = rand_uniform(-0.2f, 0.2f);
 
-				float f1 = rand_uniform(-0.2f, 0.2f);
-				float f2 = rand_uniform(-0.2f, 0.2f);
-				float f3 = rand_uniform(-0.2f, 0.2f);
-
-				gl.updateModelMatrix(Matrix4f::translation(Vector3f(position) + Vector3f(f1, f2, f3)));
+				//gl.updateModelMatrix(Matrix4f::translation(Vector3f(position) + Vector3f(f1, f2, f3)));
+				Vector3f newPos = position + offsetVector;
+				gl.updateModelMatrix(Matrix4f::translation(newPos));
+				printf("S ");
+				newPos.print();
 				gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
 				drawSphere(0.05f, 8, 8);
 				//drawQuad(0.025);

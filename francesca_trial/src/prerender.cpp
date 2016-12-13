@@ -77,19 +77,6 @@ void PrerenderSystem::draw(GLProgram& gl) {
             gl.updateModelMatrix(Matrix4f::translation(allPositionsSmoke[NUM_PARTICLES * currentIterationSmoke + i]));
             gl.updateMaterial(Vector3f(1.0f, 1.0f, 1.0f), Vector3f(-1, -1, -1), Vector3f(0, 0, 0), 1.0f, 0.5f);
 	    Vector3f p = allPositionsSmoke[NUM_PARTICLES * currentIterationSmoke + i];
-	    int counter = 0;
-		while (counter < 35) {
-
-				float f1 = rand_uniform(-0.2f, 0.2f);
-				float f2 = rand_uniform(-0.2f, 0.2f);
-				float f3 = rand_uniform(-0.2f, 0.2f);
-				
-				gl.updateModelMatrix(Matrix4f::translation(p + Vector3f(f1, f2, f3)));
-				gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
-				drawSphere(0.05f, 8, 8);
-
-				counter += 1;
-		}
             drawSphere(0.05f, 8, 8);
         }
     }
