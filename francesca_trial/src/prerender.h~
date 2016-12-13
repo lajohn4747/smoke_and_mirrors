@@ -21,8 +21,6 @@ public:
     int currentIterationSmoke = 0;
     int currentIterationCloth = 0;
     int currentIterationBall = 0;
-    int currentIteration2 = 0;
-    int lastIteration2;
     int lastIterationSmoke;
     int lastIterationCloth;
     int lastIterationBall;

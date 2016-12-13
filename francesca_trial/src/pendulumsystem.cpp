@@ -223,6 +223,9 @@ void PendulumSystem::draw(GLProgram& gl)
 		Vector3f position = m_vVecState[i*2];
 		if (i==((m_vVecState.size()/2)-1)) {
 			gl.updateModelMatrix(Matrix4f::translation(position));
+			gl.updateMaterial(PENDULUM_COLOR);
+			printf("B2 ");
+			position.print();
 			drawSphere(0.25f, 20, 20);
 		} else {
 			gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));

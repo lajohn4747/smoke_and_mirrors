@@ -223,6 +223,7 @@ void PendulumSystem::draw(GLProgram& gl)
 		Vector3f position = m_vVecState[i*2];
 		if (i==((m_vVecState.size()/2)-1)) {
 			gl.updateModelMatrix(Matrix4f::translation(position));
+			gl.updateMaterial(PENDULUM_COLOR);
 			drawSphere(0.25f, 20, 20);
 		} else {
 			gl.updateModelMatrix(Matrix4f::translation(Vector3f(position)));
@@ -234,9 +235,9 @@ void PendulumSystem::draw(GLProgram& gl)
 			int counter = 0;
 			while (counter < 35) {
 
-				float f1 = rand_uniform(-0.1f, 0.1f);
-				float f2 = rand_uniform(-0.1f, 0.1f);
-				float f3 = rand_uniform(-0.1f, 0.1f);
+				float f1 = rand_uniform(-0.2f, 0.2f);
+				float f2 = rand_uniform(-0.2f, 0.2f);
+				float f3 = rand_uniform(-0.2f, 0.2f);
 
 				gl.updateModelMatrix(Matrix4f::translation(Vector3f(position) + Vector3f(f1, f2, f3)));
 				gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);

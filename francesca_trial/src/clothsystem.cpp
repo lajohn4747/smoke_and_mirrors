@@ -470,6 +470,8 @@ void ClothSystem::draw(GLProgram& gl)
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
     gl.updateMaterial(CLOTH_COLOR);
 	vector<Vector3f> pos;
+	const Vector3f PENDULUM_COLOR(0.73f, 0.0f, 0.83f);
+	
 
 
     for (unsigned int i=0; i<m_vVecState.size(); i++) {
@@ -477,14 +479,15 @@ void ClothSystem::draw(GLProgram& gl)
 			if (i==m_vVecState.size()-2) {
 			//if (i==m_vVecState.size()) {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
+				gl.updateMaterial(PENDULUM_COLOR);
 				drawSphere(0.25f, 20, 20);
-               			//printf("B ");
-                		//m_vVecState[i].print();
+               			printf("B ");
+                		m_vVecState[i].print();
 			} else {
 				gl.updateModelMatrix(Matrix4f::translation(m_vVecState[i]));
 				pos.push_back(m_vVecState[i]);
-				//printf("C ");
-				//m_vVecState[i].print();
+				printf("C ");
+				m_vVecState[i].print();
 						//drawSphere(0.04f, 8, 8);
 			}
 		}

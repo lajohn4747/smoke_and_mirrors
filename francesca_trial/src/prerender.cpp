@@ -37,14 +37,17 @@ PrerenderSystem::PrerenderSystem() {
                 allPositionsCloth.push_back(pos);
             } else if (typeParticle == "B"){
                 allPositionsBall.push_back(pos);
-            }
+            } else if (typeParticle == "B2"){
+		allPositions2.push_back(pos);
+	    }
 
 
             //pos.print();
 
         }
     }
-
+    
+    lastIteration2 = allPositions2.size();
     lastIterationBall = allPositionsBall.size();
     lastIterationSmoke = allPositionsSmoke.size() / NUM_PARTICLES;
     lastIterationCloth = allPositionsCloth.size() / CLOTH_PARTICLES;
@@ -73,6 +76,20 @@ void PrerenderSystem::draw(GLProgram& gl) {
         for (unsigned int i = 0; i < NUM_PARTICLES; ++i) {
             gl.updateModelMatrix(Matrix4f::translation(allPositionsSmoke[NUM_PARTICLES * currentIterationSmoke + i]));
             gl.updateMaterial(Vector3f(1.0f, 1.0f, 1.0f), Vector3f(-1, -1, -1), Vector3f(0, 0, 0), 1.0f, 0.5f);
+	    Vector3f p = allPositionsSmoke[NUM_PARTICLES * currentIterationSmoke + i];
+	    int counter = 0;
+		while (counter < 35) {
+
+				float f1 = rand_uniform(-0.2f, 0.2f);
+				float f2 = rand_uniform(-0.2f, 0.2f);
+				float f3 = rand_uniform(-0.2f, 0.2f);
+				
+				gl.updateModelMatrix(Matrix4f::translation(p + Vector3f(f1, f2, f3)));
+				gl.updateMaterial(Vector3f(1.0f,1.0f,1.0f),Vector3f(-1,-1,-1), Vector3f(0,0,0),1.0f,0.5f);
+				drawSphere(0.05f, 8, 8);
+
+				counter += 1;
+		}
             drawSphere(0.05f, 8, 8);
         }
     }
@@ -114,7 +131,13 @@ void PrerenderSystem::draw(GLProgram& gl) {
         drawSphere(0.25f, 20, 20);
     }
 
+    if(currentIteration2 < lastIteration2){
+        gl.updateModelMatrix(Matrix4f::translation(allPositions2[currentIterationBall]));
+        drawSphere(0.25f, 20, 20);
+    }
+
     currentIterationSmoke += 1;
     currentIterationCloth += 1;
     currentIterationBall += 1;
+    currentIteration2 += 1;
 }
