@@ -308,30 +308,6 @@ src/prerender.cpp.s:
 	$(MAKE) -f CMakeFiles/a3.dir/build.make CMakeFiles/a3.dir/src/prerender.cpp.s
 .PHONY : src/prerender.cpp.s
 
-src/rigidBall.o: src/rigidBall.cpp.o
-.PHONY : src/rigidBall.o
-
-# target to build an object file
-src/rigidBall.cpp.o:
-	$(MAKE) -f CMakeFiles/a3.dir/build.make CMakeFiles/a3.dir/src/rigidBall.cpp.o
-.PHONY : src/rigidBall.cpp.o
-
-src/rigidBall.i: src/rigidBall.cpp.i
-.PHONY : src/rigidBall.i
-
-# target to preprocess a source file
-src/rigidBall.cpp.i:
-	$(MAKE) -f CMakeFiles/a3.dir/build.make CMakeFiles/a3.dir/src/rigidBall.cpp.i
-.PHONY : src/rigidBall.cpp.i
-
-src/rigidBall.s: src/rigidBall.cpp.s
-.PHONY : src/rigidBall.s
-
-# target to generate assembly for a file
-src/rigidBall.cpp.s:
-	$(MAKE) -f CMakeFiles/a3.dir/build.make CMakeFiles/a3.dir/src/rigidBall.cpp.s
-.PHONY : src/rigidBall.cpp.s
-
 src/simplesystem.o: src/simplesystem.cpp.o
 .PHONY : src/simplesystem.o
 
@@ -460,9 +436,6 @@ help:
 	@echo "... src/prerender.o"
 	@echo "... src/prerender.i"
 	@echo "... src/prerender.s"
-	@echo "... src/rigidBall.o"
-	@echo "... src/rigidBall.i"
-	@echo "... src/rigidBall.s"
 	@echo "... src/simplesystem.o"
 	@echo "... src/simplesystem.i"
 	@echo "... src/simplesystem.s"

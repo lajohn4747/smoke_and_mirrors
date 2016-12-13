@@ -35,7 +35,6 @@ CMakeFiles/a3.dir/src/clothsystem.cpp.o
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/clothsystem.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/gl.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/particlesystem.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
 CMakeFiles/a3.dir/src/main.cpp.o
  ../3rd_party/glew/include/GL/glew.h
@@ -55,7 +54,6 @@ CMakeFiles/a3.dir/src/main.cpp.o
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/particlesystem.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/pendulumsystem.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/prerender.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/simplesystem.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/starter3_util.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/timestepper.h
@@ -105,22 +103,6 @@ CMakeFiles/a3.dir/src/prerender.cpp.o
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/particlesystem.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/prerender.cpp
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/prerender.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o
- ../3rd_party/glew/include/GL/glew.h
- ../vecmath/include/Matrix2f.h
- ../vecmath/include/Matrix3f.h
- ../vecmath/include/Matrix4f.h
- ../vecmath/include/Quat4f.h
- ../vecmath/include/Vector2f.h
- ../vecmath/include/Vector3f.h
- ../vecmath/include/Vector4f.h
- ../vecmath/include/vecmath.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/camera.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/gl.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/particlesystem.h
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.cpp
- /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.h
  /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/vertexrecorder.h
 CMakeFiles/a3.dir/src/simplesystem.cpp.o
  ../3rd_party/glew/include/GL/glew.h

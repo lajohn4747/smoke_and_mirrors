@@ -34,7 +34,6 @@ CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/clothsystem.cpp
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/clothsystem.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/gl.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/particlesystem.h
-CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/rigidBall.h
 CMakeFiles/a3.dir/src/clothsystem.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/a3.dir/src/main.cpp.o: ../3rd_party/glew/include/GL/glew.h
@@ -54,7 +53,6 @@ CMakeFiles/a3.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/particlesystem.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/pendulumsystem.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/prerender.h
-CMakeFiles/a3.dir/src/main.cpp.o: ../src/rigidBall.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/simplesystem.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/starter3_util.h
 CMakeFiles/a3.dir/src/main.cpp.o: ../src/timestepper.h
@@ -105,22 +103,6 @@ CMakeFiles/a3.dir/src/prerender.cpp.o: ../src/particlesystem.h
 CMakeFiles/a3.dir/src/prerender.cpp.o: ../src/prerender.cpp
 CMakeFiles/a3.dir/src/prerender.cpp.o: ../src/prerender.h
 CMakeFiles/a3.dir/src/prerender.cpp.o: ../src/vertexrecorder.h
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../3rd_party/glew/include/GL/glew.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix2f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix3f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Matrix4f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Quat4f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector2f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector3f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/Vector4f.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../vecmath/include/vecmath.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/camera.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/gl.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/particlesystem.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/rigidBall.cpp
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/rigidBall.h
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/vertexrecorder.h
 
 CMakeFiles/a3.dir/src/simplesystem.cpp.o: ../3rd_party/glew/include/GL/glew.h
 CMakeFiles/a3.dir/src/simplesystem.cpp.o: ../vecmath/include/Matrix2f.h

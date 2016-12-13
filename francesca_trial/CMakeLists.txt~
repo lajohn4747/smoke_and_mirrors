@@ -56,6 +56,7 @@ list (APPEND A3_SRC
   src/particlesystem.cpp
   src/pendulumsystem.cpp
   src/simplesystem.cpp
+  src/rigidBall.cpp
   src/prerender.cpp
 )
 list (APPEND A3_HEADER
@@ -68,6 +69,7 @@ list (APPEND A3_HEADER
   src/particlesystem.h
   src/pendulumsystem.h
   src/simplesystem.h
+  src/rigidBall.h
   src/prerender.h
 )
 

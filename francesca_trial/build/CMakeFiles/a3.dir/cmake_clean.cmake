@@ -9,7 +9,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/a3.dir/src/particlesystem.cpp.o"
   "CMakeFiles/a3.dir/src/pendulumsystem.cpp.o"
   "CMakeFiles/a3.dir/src/simplesystem.cpp.o"
-  "CMakeFiles/a3.dir/src/rigidBall.cpp.o"
   "CMakeFiles/a3.dir/src/prerender.cpp.o"
   "a3.pdb"
   "a3"

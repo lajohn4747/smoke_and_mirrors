@@ -282,32 +282,9 @@ CMakeFiles/a3.dir/src/simplesystem.cpp.o.provides: CMakeFiles/a3.dir/src/simples
 
 CMakeFiles/a3.dir/src/simplesystem.cpp.o.provides.build: CMakeFiles/a3.dir/src/simplesystem.cpp.o
 
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: CMakeFiles/a3.dir/flags.make
-CMakeFiles/a3.dir/src/rigidBall.cpp.o: ../src/rigidBall.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a3.dir/src/rigidBall.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a3.dir/src/rigidBall.cpp.o -c /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.cpp
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a3.dir/src/rigidBall.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.cpp > CMakeFiles/a3.dir/src/rigidBall.cpp.i
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a3.dir/src/rigidBall.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/rigidBall.cpp -o CMakeFiles/a3.dir/src/rigidBall.cpp.s
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.o.requires:
-.PHONY : CMakeFiles/a3.dir/src/rigidBall.cpp.o.requires
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.o.provides: CMakeFiles/a3.dir/src/rigidBall.cpp.o.requires
-	$(MAKE) -f CMakeFiles/a3.dir/build.make CMakeFiles/a3.dir/src/rigidBall.cpp.o.provides.build
-.PHONY : CMakeFiles/a3.dir/src/rigidBall.cpp.o.provides
-
-CMakeFiles/a3.dir/src/rigidBall.cpp.o.provides.build: CMakeFiles/a3.dir/src/rigidBall.cpp.o
-
 CMakeFiles/a3.dir/src/prerender.cpp.o: CMakeFiles/a3.dir/flags.make
 CMakeFiles/a3.dir/src/prerender.cpp.o: ../src/prerender.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a3.dir/src/prerender.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a3.dir/src/prerender.cpp.o -c /afs/athena.mit.edu/user/f/c/fcicileo/Desktop/6_837/smoke_and_mirrors/francesca_trial/src/prerender.cpp
 
@@ -340,7 +317,6 @@ a3_OBJECTS = \
 "CMakeFiles/a3.dir/src/particlesystem.cpp.o" \
 "CMakeFiles/a3.dir/src/pendulumsystem.cpp.o" \
 "CMakeFiles/a3.dir/src/simplesystem.cpp.o" \
-"CMakeFiles/a3.dir/src/rigidBall.cpp.o" \
 "CMakeFiles/a3.dir/src/prerender.cpp.o"
 
 # External object files for target a3
@@ -356,7 +332,6 @@ a3: CMakeFiles/a3.dir/src/timestepper.cpp.o
 a3: CMakeFiles/a3.dir/src/particlesystem.cpp.o
 a3: CMakeFiles/a3.dir/src/pendulumsystem.cpp.o
 a3: CMakeFiles/a3.dir/src/simplesystem.cpp.o
-a3: CMakeFiles/a3.dir/src/rigidBall.cpp.o
 a3: CMakeFiles/a3.dir/src/prerender.cpp.o
 a3: CMakeFiles/a3.dir/build.make
 a3: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -387,7 +362,6 @@ CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/timestepper.cpp.o.requires
 CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/particlesystem.cpp.o.requires
 CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/pendulumsystem.cpp.o.requires
 CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/simplesystem.cpp.o.requires
-CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/rigidBall.cpp.o.requires
 CMakeFiles/a3.dir/requires: CMakeFiles/a3.dir/src/prerender.cpp.o.requires
 .PHONY : CMakeFiles/a3.dir/requires
 
