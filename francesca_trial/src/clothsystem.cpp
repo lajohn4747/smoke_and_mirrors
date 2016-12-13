@@ -494,7 +494,7 @@ void ClothSystem::draw(GLProgram& gl)
     }
 
 
-    gl.disableLighting();
+
     gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
     VertexRecorder rec;
 
